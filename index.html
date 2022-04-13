@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/response.css">
+    <!-- <link rel="stylesheet" href="./css/response.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
@@ -18,43 +18,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 
+    <!-- jQuery 오픈소스 -->
+    <script src="./js/lib/jquery.min.js"></script> 
+	<script src='./js/lib/jquery-1.12.4.min.js'></script>
+	<script src='./js/lib/jquery.mobile-1.4.5.min.js'></script><!-- 터치이벤트 웹앱 -->
+	<script src='./js/lib/jquery.easing.1.3.js'></script>
 
-    <script src="./js/lib/jquery.min.js"></script>
-    <script src="./js/lib/jquery.easing.1.3.js"></script>
-    <script src="./js/swipe.js"></script>
-    
+    <!-- 리액트 웹개발 오픈소스 -->    
+    <script src="./js/lib/react.development.js"></script>
+    <script src="./js/lib/react-dom.development.js"></script>
+    <script src="./js/lib/babel.min.js"></script>
+
+
 
 </head>
 <body>
    
 <div id="wrap">
     <ul id="skip">
-        <li><a href="#header">메뉴바로가기</a></li>
-        <li><a href="#main">메인바로가기</a></li>
-        <li><a href="#footer">하단바로가기</a></li>
+        <li><a href="#header" class="smoothBtn ">메뉴바로가기</a></li>
+        <li><a href="#main" class="smoothBtn ">메인바로가기</a></li>
+        <li><a href="#footer" class="smoothBtn ">하단바로가기</a></li>
     </ul>
-    <header id="header">
-        <div class="container clearfix">
+    <header id="header" >
+        <div class="container ">
 
-            <div class="top">
+            <div class="top clearfix">
 
                 <div class="left">
-                    <h1><a href="./index.html" class="logo-btn" title="Logo"><img src="./img/logo_w.png" alt="logo"></a></h1>
+                    <div>
+                        <h1>
+                            <a  href="./index.html" class="logo-btn " title="Logo">
+                                <span ></span>
+                            </a>
+                        </h1>
+                    </div>
                 </div>
                 
                 <div class="right">
                     <aside id="aside" class="clearfix">
                         <div class="icon-box-gap">
                             <div class="icon-box">
-                                <ul class="clearfix">
-                                    <li>
-                                       <a href="#"><span class="glyphicon">&#xe003;</span></a> 
+                                <ul class="clearfix ">
+                                    <li >
+                                       <!-- <a href="#"><span class="glyphicon">&#xe003;</span></a>  -->
+                                       <a href="#"><img src="./img/magni.svg" alt=""></a> 
                                         
                                     </li>
                                     <li>
                                         <a href="#">
                                             <em class="badge">5</em>
-                                            <span class="glyphicon">&#xe116;</span>
+                                            <a href="#"><img src="./img/cart.svg" alt=""></a> 
+                                            <!-- <span class="glyphicon">&#xe116;</span> -->
                                         </a>
                                     </li>
                                     
@@ -72,7 +87,7 @@
                 <div class="bottom-wrap">
                     <nav id="nav" class="clearfix">
                         <ul class="clearfix">
-                            <li class="mainbtn addclass">
+                            <li class="mainbtn addclass ">
                                 <a href="#" class="main-btn">홈</a>
                                 
                             </li>
@@ -108,9 +123,28 @@
 
                 <div class="gap">
                     <div class="wrap">
-                        <div class="content">
+                        <div class="slide-container">
+                            <div class="slide-view">
+
                                 <ul class="slide-wrap" >
                                     <li class="slide slide0">
+                                        <div class="slide-text">
+                                            <h3>
+                                                장바구니는 무겁게<br>
+                                                <strong>가격은 가볍게</strong>
+                                            </h3>
+                                            <h4>마음 무겁지 않은 쇼핑<br>
+                                                지금 바로 냉장고 채워보세요!
+                                            </h4>
+                                        </div>
+                                        <div class="cnt">
+                                            <h5><strong>4&nbsp;</strong>/&nbsp;4</h5>
+                                        </div>
+                                        <a href="#">
+                                            <img src="./img/slide4.png" alt="">
+                                        </a>                                        
+                                    </li>
+                                    <li class="slide slide1">
                                         <div class="slide-text">
                                             <h3>
                                                 좋은 상품 있으면<br>
@@ -122,12 +156,18 @@
                                             <span>
                                                 <button>EVENT</button>
                                             </span>
+                                            
                                         </div>
+
+                                        <div class="cnt">
+                                            <h5><strong>1&nbsp;</strong>/&nbsp;4</h5>
+                                        </div>
+
                                         <a href="#">
                                             <img src="./img/slide1.png" alt="">
                                         </a>                                        
                                     </li>
-                                    <li class="slide slide1">
+                                    <li class="slide slide2">
                                         <div class="slide-text">
                                             <h3>
                                                 라운딩 하기 좋은날<br>
@@ -136,13 +176,18 @@
                                             <h4>고품질 최저가의 골프용품을<br>
                                                 한 곳에서 만나보세요!
                                             </h4>
-                                            
+                                           
                                         </div>
+
+                                        <div class="cnt">
+                                            <h5><strong>2&nbsp;</strong>/&nbsp;3</h5>
+                                        </div>
+
                                         <a href="#">
                                             <img src="./img/slide2.png" alt="">
                                         </a>
                                     </li>
-                                    <li class="slide slide2">
+                                    <li class="slide slide3">
                                         <div class="slide-text white">
                                             <h3>
                                                 고품질 직배송<br>
@@ -151,13 +196,18 @@
                                             <h4 class="white">1++ 한우 꽃등심 400g<br>
                                                 1++ 한우 채끝 500g
                                             </h4>
-                                           
+                                            
                                         </div>
+
+                                        <div class="cnt">
+                                            <h5><strong>3&nbsp;</strong>/&nbsp;4</h5>
+                                        </div>
+
                                         <a href="#">
                                             <img src="./img/slide3.png" alt="">
                                         </a>
-                                    </li class="slide slide0">
-                                    <li class="slide slide3">
+                                    </li >
+                                    <li class="slide slide4">
                                         <div class="slide-text">
                                             <h3>
                                                 장바구니는 무겁게<br>
@@ -167,54 +217,95 @@
                                                 지금 바로 냉장고 채워보세요!
                                                 
                                             </h4>
+                                            
                                         </div>
+
+                                        <div class="cnt">
+                                            <h5><strong>4&nbsp;</strong>/&nbsp;4</h5>
+                                        </div>
+
                                         <a href="#">
                                             <img src="./img/slide4.png" alt="">
                                         </a>                                        
                                     </li>
+                                    <li class="slide slide5">
+                                        <div class="slide-text">
+                                            <h3>
+                                                좋은 상품 있으면<br>
+                                                <strong>소개 시켜줘!</strong>
+                                            </h3>
+                                            <h4>엔몰에서 만나보고 싶은<br>
+                                                상품을 추천해주세요!
+                                            </h4>
+                                            <span>
+                                                <button>EVENT</button>
+                                            </span>
+                                           
+                                        </div>
+
+                                        <div class="cnt">
+                                            <h5><strong>1&nbsp;</strong>/&nbsp;4</h5>
+                                        </div>
+                                        <a href="#">
+                                            <img src="./img/slide1.png" alt="">
+                                        </a>                                        
+                                    </li>
                                 </ul>
+                            </div>
                         </div>
                         <!-- content -->
-                        <div class="btn-wrap">
-                            <ul>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/btn1.png" alt="btn1">
-                                        <span>데일리픽</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/btn2.png" alt="btn1">
-                                        <span>선물하기</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/btn1.png" alt="btn1">
-                                        <span>이벤트</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/btn4.png" alt="btn1">
-                                        <span>쿠폰혜택</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/btn5.png" alt="btn1">
-                                     <span>K마트</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <img src="./img/btn5.png" alt="btn1">
-                                        <span>K마트</span>
-                                    </a>
-                                </li>
-                            </ul>
+                        <div class="btn-container">
+                            <div class="btn-view slide_menu swiper-container swiper-container-initialized swiper-container-horizontal">
+
+                                    <ul class="btn-wrap swiper-wrapper menu_list">
+                                        <li class="swiper-slide btn0">
+                                            <a href="#">
+                                                <img src="./img/btn1.png" alt="">
+                                                <span>프리미엄관</span>
+                                            </a>
+                                        </li>
+                                        <li  class="swiper-slide ">
+                                            <a href="#">
+                                                <img src="./img/btn2.png" alt="">
+                                                <span>MD추천</span>
+                                            </a>
+                                        </li>
+                                        <li  class="swiper-slide btn2">
+                                            <a href="#">
+                                                <img src="./img/btn3.png" alt="">
+                                                <span>N마트</span>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide btn3">
+                                            <a href="#">
+                                                <img src="./img/btn4.png" alt="">
+                                                <span>쿠폰</span>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide btn4">
+                                            <a href="#">
+                                                <img src="./img/btn5.png" alt="">
+                                                <span>한정특가</span>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide btn5">
+                                            <a href="#">
+                                                <img src="./img/btn6.png" alt="">
+                                            <span>카테고리</span>
+                                            </a>
+                                        </li>
+                                        <li class="swiper-slide btn6">
+                                            <a href="#">
+                                                <img src="./img/btn7.png" alt="">
+                                                <span>선물하기</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                
+                            </div>
+                            <!-- btn-view -->
                         </div>
+                        <!-- btn-container -->
                     </div>
                     <!-- #wrap -->
                 </div>
@@ -222,7 +313,7 @@
                 
             </div>
             <span class="top-btn">
-                <a href="#header" target="_blank">
+                <a href="#section1" class="smoothBtn " target="_blank">
                     <img src="img/topbtn.png" alt="">
                 </a>
             </span>
@@ -232,106 +323,421 @@
             <div class="container">
                 <div class="gap">
                 <div class="wrap">
-                    <div class="content">
-                        <h2>한정수량, 오늘만 이가격! <span><a href="#">더보기 &nbsp;></a></span></h2>
-                        <div class="slide-wrap">
-                            <ul class="sec2-slide-wrap" >
+                    <div class="sec2-slide-container">
+                        <div class="slide-view">
+                            <h2>지금 이시간! 타임딜 <i></i></h2>
+                            <h3>지금 고민하는 순간 끝! 기회를 잡으세요<span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
+                           
+                                <ul class="sec2-slide-wrap" >
 
-                                <li class="sec2-slide slide0">
-                                    <div class="slide-text">
-                                        
-                                        <div class="img-box">
-                                            <div class="time">
-                                                05:02:49 남음
+                                    <li class="slide slide0">
+                                        <div class="slide-text">
+                                            
+                                            <div class="img-box">
+                                                <div class="time">
+                                                    <div class="left" >남은시간</div>
+                                                    <div class="right">05:02:49</div>
+                                                </div>
+                                                <a href="#">
+                                                    <img src="./img/sec2-slide1.png" alt="sec2-slide1">
+                                                </a>
                                             </div>
-                                            <a href="#">
-                                                <img src="./img/sec2-slide1.png" alt="sec2-slide1">
-                                            </a>
-                                        </div>
-                                        <div class="text-box">
-                                            <h3>
-                                                [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
-                                                i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
-                                            </h3>
-                                            <ul>
-                                                <li>42<span>%</span></li>
-                                                <li>1,329,900<span>원</span></li>
-                                                <li>2,290,000원</li>
-                                                <li>1,234개 구매</li>
-                                            </ul>
-                                            <span>
-                                                무료배송<i> ·</i>
-                                                K딜추천<i> ·</i>
-                                                단독특가
-                                            </span>
-                                        </div>
-                                       
-                                    </div>
-                                </li>
-                                <li class="sec2-slide slide1">
-                                    <div class="slide-text">
-                                        
-                                        <div class="img-box">
-                                            <div class="time">
-                                                05:02:49 남음
+                                            <div class="text-box">
+                                                <h3>
+                                                    [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                    i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                </h3>
+                                                <ul class="text2">
+                                                    <li>42<span>%</span></li>
+                                                    <li>1,329,900<span>원</span></li>
+                                                    <li>2,290,000원</li>
+                                                </ul>
+                                                <hr>
+                                                <ul class="text3">
+                                                    <li>
+                                                        <span>
+                                                            무료배송<i> ·</i>
+                                                            K딜추천<i> ·</i>
+                                                            단독특가
+                                                        </span>
+                                                     </li>                                                     
+                                                     <li>
+                                                         <i class="fa fa-star"></i>
+                                                         4.0 <span>(6)</span>
+                                                     </li>
+                                                 </ul>
                                             </div>
-                                            <a href="#">
-                                                <img src="./img/sec2-slide2.png" alt="sec2-slide1">
-                                            </a>
-                                        </div>
-                                        <div class="text-box">
-                                            <h3>
-                                                [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
-                                                i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
-                                            </h3>
-                                            <ul>
-                                                <li>42<span>%</span></li>
-                                                <li>1,329,900<span>원</span></li>
-                                                <li>2,290,000원</li>
-                                                <li>1,234개 구매</li>
-                                            </ul>
-                                            <span>
-                                                무료배송<i> ·</i>
-                                                K딜추천<i> ·</i>
-                                                단독특가
-                                            </span>
-                                        </div>
-                                       
-                                    </div>
-                                </li>
-                                <li class="sec2-slide slide2">
-                                    <div class="slide-text">
                                         
-                                        <div class="img-box">
-                                            <div class="time">
-                                                05:02:49 남음
+                                        </div>
+                                    </li>
+                                    <li class="slide slide1">
+                                        <div class="slide-text">
+                                            
+                                            <div class="img-box">
+                                                <div class="time">
+                                                    <div class="left">남은시간</div>
+                                                    <div class="right">05:02:49</div>
+                                                </div>
+                                                <a href="#">
+                                                    <img src="./img/sec2-slide2.png" alt="sec2-slide1">
+                                                </a>
                                             </div>
-                                            <a href="#">
-                                                <img src="./img/sec2-slide3.png" alt="sec2-slide1">
-                                            </a>
+                                            <div class="text-box">
+                                                <h3>
+                                                    [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                    i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                </h3>
+                                                <ul class="text2">
+                                                    <li>42<span>%</span></li>
+                                                    <li>1,329,900<span>원</span></li>
+                                                    <li>2,290,000원</li>
+                                                </ul>
+                                                <hr>
+                                                <ul class="text3">
+                                                    <li>
+                                                        <span>
+                                                            무료배송<i> ·</i>
+                                                            K딜추천<i> ·</i>
+                                                            단독특가
+                                                        </span>
+                                                     </li>                                                     
+                                                     <li>
+                                                         <i class="fa fa-star"></i>
+                                                         4.0 <span>(6)</span>
+                                                     </li>
+                                                 </ul>
+                                            </div>
+                                        
                                         </div>
-                                        <div class="text-box">
-                                            <h3>
-                                                [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
-                                                i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
-                                            </h3>
-                                            <ul>
-                                                <li>42<span>%</span></li>
-                                                <li>1,329,900<span>원</span></li>
-                                                <li>2,290,000원</li>
-                                                <li>1,234개 구매</li>
-                                            </ul>
-                                            <span>
-                                                무료배송<i> ·</i>
-                                                K딜추천<i> ·</i>
-                                                단독특가
-                                            </span>
+                                    </li>
+                                    <li class="slide slide2">
+                                        <div class="slide-text">
+                                            
+                                            <div class="img-box">
+                                                <div class="time">
+                                                    <div class="left">남은시간</div>
+                                                    <div class="right">05:02:49</div> 
+                                                </div>
+                                                <a href="#">
+                                                    <img src="./img/sec2-slide3.png" alt="sec2-slide1">
+                                                </a>
+                                            </div>
+                                            <div class="text-box">
+                                                <h3>
+                                                    [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                    i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                </h3>
+                                                <ul class="text2">
+                                                    <li>42<span>%</span></li>
+                                                    <li>1,329,900<span>원</span></li>
+                                                    <li>2,290,000원</li>
+                                                </ul>
+                                                <hr>
+                                                <ul class="text3">
+                                                    <li>
+                                                        <span>
+                                                            무료배송<i> ·</i>
+                                                            K딜추천<i> ·</i>
+                                                            단독특가
+                                                        </span>
+                                                     </li>                                                     
+                                                     <li>
+                                                         <i class="fa fa-star"></i>
+                                                         4.0 <span>(6)</span>
+                                                     </li>
+                                                 </ul>
+                                            </div>
+                                        
                                         </div>
-                                       
-                                    </div>
-                                </li>
-                                
-                            </ul>
+                                    </li>
+                                    <li class="slide slide3">
+                                        <div class="slide-text">
+                                            
+                                            <div class="img-box">
+                                                <div class="time">
+                                                    <div class="left">남은시간</div>
+                                                    <div class="right">05:02:49</div> 
+                                                </div>
+                                                <a href="#">
+                                                    <img src="./img/sec2-slide4.png" alt="sec2-slide1">
+                                                </a>
+                                            </div>
+                                            <div class="text-box">
+                                                <h3>
+                                                    [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                    i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                </h3>
+                                                <ul class="text2">
+                                                    <li>42<span>%</span></li>
+                                                    <li>1,329,900<span>원</span></li>
+                                                    <li>2,290,000원</li>
+                                                </ul>
+                                                <hr>
+                                                <ul class="text3">
+                                                    <li>
+                                                        <span>
+                                                            무료배송<i> ·</i>
+                                                            K딜추천<i> ·</i>
+                                                            단독특가
+                                                        </span>
+                                                     </li>                                                     
+                                                     <li>
+                                                         <i class="fa fa-star"></i>
+                                                         4.0 <span>(6)</span>
+                                                     </li>
+                                                 </ul>
+                                            </div>
+                                        
+                                        </div>
+                                    </li>
+                                    <li class="slide slide4">
+                                        <div class="slide-text">
+                                            
+                                            <div class="img-box">
+                                                <div class="time">
+                                                    <div class="left">남은시간</div>
+                                                    <div class="right">05:02:49</div>
+                                                    
+                                                </div>
+                                                <a href="#">
+                                                    <img src="./img/sec2-slide5.png" alt="sec2-slide1">
+                                                </a>
+                                            </div>
+                                            <div class="text-box">
+                                                <h3>
+                                                    [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                    i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                </h3>
+                                                <ul class="text2">
+                                                    <li>42<span>%</span></li>
+                                                    <li>1,329,900<span>원</span></li>
+                                                    <li>2,290,000원</li>
+                                                </ul>
+                                                <hr>
+                                                <ul class="text3">
+                                                    <li>
+                                                        <span>
+                                                            무료배송<i> ·</i>
+                                                            K딜추천<i> ·</i>
+                                                            단독특가
+                                                        </span>
+                                                     </li>                                                     
+                                                     <li>
+                                                         <i class="fa fa-star"></i>
+                                                         4.0 <span>(6)</span>
+                                                     </li>
+                                                 </ul>
+                                            </div>
+                                        
+                                        </div>
+                                    </li>
+                                    <li class="slide slide5">
+                                        <div class="slide-text">
+                                            
+                                            <div class="img-box">
+                                                <div class="time">
+                                                    <div class="left">남은시간</div>
+                                                    <div class="right">05:02:49</div>
+                                                    
+                                                </div>
+                                                <a href="#">
+                                                    <img src="./img/sec2-slide6.png" alt="sec2-slide1">
+                                                </a>
+                                            </div>
+                                            <div class="text-box">
+                                                <h3>
+                                                    [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                    i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                </h3>
+                                                <ul class="text2">
+                                                    <li>42<span>%</span></li>
+                                                    <li>1,329,900<span>원</span></li>
+                                                    <li>2,290,000원</li>
+                                                </ul>
+                                                <hr>
+                                                <ul class="text3">
+                                                    <li>
+                                                        <span>
+                                                            무료배송<i> ·</i>
+                                                            K딜추천<i> ·</i>
+                                                            단독특가
+                                                        </span>
+                                                     </li>                                                     
+                                                     <li>
+                                                         <i class="fa fa-star"></i>
+                                                         4.0 <span>(6)</span>
+                                                     </li>
+                                                 </ul>
+                                            </div>
+                                        
+                                        </div>
+                                    </li>
+                                    <li class="slide slide6">
+                                        <div class="slide-text">
+                                            
+                                            <div class="img-box">
+                                                <div class="time">
+                                                    <div class="left">남은시간</div>
+                                                    <div class="right">05:02:49</div>
+                                                    
+                                                </div>
+                                                <a href="#">
+                                                    <img src="./img/sec2-slide7.png" alt="sec2-slide1">
+                                                </a>
+                                            </div>
+                                            <div class="text-box">
+                                                <h3>
+                                                    [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                    i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                </h3>
+                                                <ul class="text2">
+                                                    <li>42<span>%</span></li>
+                                                    <li>1,329,900<span>원</span></li>
+                                                    <li>2,290,000원</li>
+                                                </ul>
+                                                <hr>
+                                                <ul class="text3">
+                                                    <li>
+                                                        <span>
+                                                            무료배송<i> ·</i>
+                                                            K딜추천<i> ·</i>
+                                                            단독특가
+                                                        </span>
+                                                     </li>                                                     
+                                                     <li>
+                                                         <i class="fa fa-star"></i>
+                                                         4.0 <span>(6)</span>
+                                                     </li>
+                                                 </ul>
+                                            </div>
+                                        
+                                        </div>
+                                    </li>
+                                    <li class="slide slide7">
+                                        <div class="slide-text">
+                                            
+                                            <div class="img-box">
+                                                <div class="time">
+                                                    <div class="left">남은시간</div>
+                                                    <div class="right">05:02:49</div>
+                                                    
+                                                </div>
+                                                <a href="#">
+                                                    <img src="./img/sec2-slide8.png" alt="sec2-slide1">
+                                                </a>
+                                            </div>
+                                            <div class="text-box">
+                                                <h3>
+                                                    [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                    i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                </h3>
+                                                <ul class="text2">
+                                                    <li>42<span>%</span></li>
+                                                    <li>1,329,900<span>원</span></li>
+                                                    <li>2,290,000원</li>
+                                                </ul>
+                                                <hr>
+                                                <ul class="text3">
+                                                    <li>
+                                                        <span>
+                                                            무료배송<i> ·</i>
+                                                            K딜추천<i> ·</i>
+                                                            단독특가
+                                                        </span>
+                                                     </li>                                                     
+                                                     <li>
+                                                         <i class="fa fa-star"></i>
+                                                         4.0 <span>(6)</span>
+                                                     </li>
+                                                 </ul>
+                                            </div>
+                                        
+                                        </div>
+                                    </li>
+                                    <li class="slide slide8">
+                                        <div class="slide-text">
+                                            
+                                            <div class="img-box">
+                                                <div class="time">
+                                                    <div class="left">남은시간</div>
+                                                    <div class="right">05:02:49</div>
+                                                    
+                                                </div>
+                                                <a href="#">
+                                                    <img src="./img/sec2-slide9.png" alt="sec2-slide1">
+                                                </a>
+                                            </div>
+                                            <div class="text-box">
+                                                <h3>
+                                                    [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                    i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                </h3>
+                                                <ul class="text2">
+                                                    <li>42<span>%</span></li>
+                                                    <li>1,329,900<span>원</span></li>
+                                                    <li>2,290,000원</li>
+                                                </ul>
+                                                <hr>
+                                                <ul class="text3">
+                                                    <li>
+                                                        <span>
+                                                            무료배송<i> ·</i>
+                                                            K딜추천<i> ·</i>
+                                                            단독특가
+                                                        </span>
+                                                     </li>                                                     
+                                                     <li>
+                                                         <i class="fa fa-star"></i>
+                                                         4.0 <span>(6)</span>
+                                                     </li>
+                                                 </ul>
+                                            </div>
+                                        
+                                        </div>
+                                    </li>
+                                    <li class="slide slide9">
+                                        <div class="slide-text">
+                                            
+                                            <div class="img-box">
+                                                <div class="time">
+                                                    <div class="left">남은시간</div>
+                                                    <div class="right">05:02:49</div>
+                                                    
+                                                </div>
+                                                <a href="#">
+                                                    <img src="./img/sec2-slide10.png" alt="sec2-slide1">
+                                                </a>
+                                            </div>
+                                            <div class="text-box">
+                                                <h3>
+                                                    [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                    i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                </h3>
+                                                <ul class="text2">
+                                                    <li>42<span>%</span></li>
+                                                    <li>1,329,900<span>원</span></li>
+                                                    <li>2,290,000원</li>
+                                                </ul>
+                                                <hr>
+                                                <ul class="text3">
+                                                    <li>
+                                                        <span>
+                                                            무료배송<i> ·</i>
+                                                            K딜추천<i> ·</i>
+                                                            단독특가
+                                                        </span>
+                                                     </li>                                                     
+                                                     <li>
+                                                         <i class="fa fa-star"></i>
+                                                         4.0 <span>(6)</span>
+                                                     </li>
+                                                 </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                           
                         </div>
                        
 
@@ -345,139 +751,183 @@
                 <div class="gap">
                     <div class="wrap">
                         <div class="content">
-                            <h2>눈 여겨 볼 상품 <span><a href="#">더보기 &nbsp;></a></span></h2>
-                            <div class="top-img-wrap">
-                                <div class="top-img-gap">
-                                    <a href="#">
-                                        <img src="./img/sec3img1.png" alt="">
-                                    </a>
+                            <h2>MD’s Pick<i></i></h2>
+                            <h3>놓쳐서는 안될 상품을 모아봤어요<span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
+                         
+                            <div class="slide-container">
+                                <div class="slide-view">
+                                    <ul class="slide-wrap" >
+        
+                                        <li class="slide slide0 swipe">
+                                            <div class="slide-text">                                                
+                                                <div class="img-box">
+                                                    <div class="heart">
+                                                        <a href="#">
+                                                            <img src="./img/heart.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <a href="#">
+                                                        <img src="./img/sec3slide1.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text-box">
+                                                    <h3>
+                                                        [소유] UVC 다용도 살균기
+                                                        MDA-100RG 핸드폰, ...
+                                                    </h3>
+                                                    <h4>50,000원</h4>
+                                                    <ul class="price">
+                                                        <li>42<span>%</span></li>
+                                                        <li>1,329,900<span>원</span></li>                                                        
+                                                    </ul>
+                                                    <ul class="star">
+                                                        <li>
+                                                            <i class="fa fa-star"></i>
+                                                            4.0 <span>(6)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="slide slide1 swipe">
+                                            <div class="slide-text">                                                
+                                                <div class="img-box">
+                                                    <div class="heart">
+                                                        <a href="#">
+                                                            <img src="./img/heart.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <a href="#">
+                                                        <img src="./img/sec3slide2.png" alt="">
+                                                    </a>                                                
+                                                </div>
+                                                <div class="text-box">
+                                                    <h3>
+                                                        제목 한줄 처리
+                                                    </h3>
+                                                    <h4>2,290,000원</h4>
+                                                    <ul class="price">
+                                                        <li>42<span>%</span></li>
+                                                        <li>1,329,900<span>원</span></li>                                                        
+                                                    </ul>
+                                                    <ul class="star">
+                                                        <li>
+                                                            <i class="fa fa-star"></i>
+                                                            4.0 <span>(9,999)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="slide slide2 swipe">
+                                            <div class="slide-text">                                                
+                                                <div class="img-box">
+                                                    <div class="heart">
+                                                        <a href="#">
+                                                            <img src="./img/heart.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <a href="#">
+                                                        <img src="./img/sec3slide3.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text-box">
+                                                    <h3>
+                                                        [브레스마스크] KF-94 <br>마스크 대형 5매입 x 10...
+                                                    </h3>
+                                                    <h4>2,290,000원</h4>
+                                                    <ul class="price">
+                                                        <li>42<span>%</span></li>
+                                                        <li>1,329,900<span>원</span></li>                                                        
+                                                    </ul>
+                                                    <ul class="star">
+                                                        <li>
+                                                            <i class="fa fa-star"></i>
+                                                            4.0 <span>(624)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="slide slide3 swipe">
+                                            <div class="slide-text">                                                
+                                                <div class="img-box">
+                                                    <div class="heart">
+                                                        <a href="#">
+                                                            <img src="./img/heart.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <a href="#">
+                                                        <img src="./img/sec3slide4.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text-box">
+                                                    <h3>
+                                                        [에티카] 보건용마스크 K<br>F94 화이트/블랙 - 대...
+                                                    </h3>
+                                                    <h4>2,290,000원</h4>
+                                                    <ul class="price">
+                                                        <li>42<span>%</span></li>
+                                                        <li>1,329,900<span>원</span></li>                                                        
+                                                    </ul>
+                                                    <ul class="star">
+                                                        <li>
+                                                            <i class="fa fa-star"></i>
+                                                            4.0 <span>(1,146)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="slide slide4 swipe">
+                                            <div class="slide-text">
+                                                <div class="img-box">
+                                                    <div class="heart">
+                                                        <a href="#">
+                                                            <img src="./img/heart.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <a href="#">
+                                                        <img src="./img/sec3slide5.png" alt="">
+                                                    </a>                                                
+                                                </div>
+                                                <div class="text-box">
+                                                    <h3>
+                                                        [이롬] 황성주 유기농 AB<br>
+                                                        C주스 110ml x 24팩 외 ...
+                                                    </h3>
+                                                    <h4>2,290,000원</h4>
+                                                    <ul class="price">
+                                                        <li>42<span>%</span></li>
+                                                        <li>1,329,900<span>원</span></li>                                                        
+                                                    </ul>
+                                                    <ul class="star">
+                                                        <li>
+                                                            <i class="fa fa-star"></i>
+                                                            4.0 <span>(26)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                       
+                                        <li class="circle swipe">
+                                            <div class="slide-text">
+                                                <div class="img-box">
+                                                    <a href="#">
+                                                        <img src="./img/sec3arrow.png" alt="">
+                                                    </a>                                               
+                                                </div>
+                                                <div class="text-box">
+                                                    <h5>더보기</h5>                                                
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
+                            </div>                 
 
-                            <div class="slide-wrap">
-                                <ul class="sec3-slide-wrap" >
-    
-                                    <li class="sec3-slide slide0">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec3slide1.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [소유] UVC 다용도 살균 <br>기 MDA-100RG 칫솔 ...
-                                                </h3>
-                                                <h4>2,290,000원</h4>
-                                                <ul>
-                                                    <li>42<span>%</span></li>
-                                                    <li>1,329,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec3-slide slide1">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec3slide2.png" alt="">
-                                                </a>                                                
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [ABKO] 앱코 라이프 필<br>라테스링 실내 홈트, PT...
-                                                </h3>
-                                                <h4>2,290,000원</h4>
-                                                <ul>
-                                                    <li>42<span>%</span></li>
-                                                    <li>1,329,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec3-slide slide2">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec3slide3.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [브레스마스크] KF-94 <br>마스크 대형 5매입 x 10...
-                                                </h3>
-                                                <h4>2,290,000원</h4>
-                                                <ul>
-                                                    <li>42<span>%</span></li>
-                                                    <li>1,329,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec3-slide slide3">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec3slide4.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [에티카] 보건용마스크 K<br>F94 화이트/블랙 - 대...
-                                                </h3>
-                                                <h4>2,290,000원</h4>
-                                                <ul>
-                                                    <li>42<span>%</span></li>
-                                                    <li>1,329,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec3-slide slide4">
-                                        <div class="slide-text">
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec3slide5.png" alt="">
-                                                </a>                                                
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [이롬] 황성주 유기농 AB<br>
-                                                    C주스 110ml x 24팩 외 ...
-                                                </h3>
-                                                <h4>2,290,000원</h4>
-                                                <ul>
-                                                    <li>42<span>%</span></li>
-                                                    <li>1,329,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec3-slide slide5">
-                                        <div class="slide-text">
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec3slide6.png" alt="">
-                                                </a>                                               
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [뉴트리디데이] 시그니처 <br>프로폴리스 500mg x 6...
-                                                </h3>
-                                                <h4>2,290,000원</h4>
-                                                <ul>
-                                                    <li>42<span>%</span></li>
-                                                    <li>1,329,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -506,150 +956,131 @@
                 <div class="gap">
                     <div class="wrap">
                         <div class="content">
-                            <h2>K딜 추천 상품 </h2>
-                            <div class="sec5-wrap">
-                                <ul class="sec5-box-wrap" >
-    
-                                    <li class="sec5-box sec5-img0">
-                                        <div class="slide-text">
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec5-img1.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <div class="text2">
+                            <h2>지금 고객님께 딱!<i></i></h2>
+                            <h3>이 순간에만 만나 볼 수 있는 특별한 기획 <span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
+                         
+                            <div class="text-box">
+                                <h4>비 올때<br>
+                                    필요한 필수템</h4>
+                                <h5>15%쿠폰 + 첫 적립 이벤트</h5>
+                                <div><a href="#">상품 더보기 ></a></div>
+                            </div>
+
+                            <div class="slide-container">                                
+                                <div class="slide-view">
+                                    <ul class="slide-wrap" >        
+                                        <li class="slide slide0 swipe">
+                                            <div class="slide-text">                                                
+                                                <div class="img-box">
+                                                    <div class="heart">
+                                                        <a href="#">
+                                                            <img src="./img/heart.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <a href="#">
+                                                        <img src="./img/sec5slide1.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text-box">
                                                     <h3>
-                                                        [무슈제이] 모이스처 밸런스 올인원 155ml
+                                                        [소유] UVC 다용도 살균기
+                                                        MDA-100RG 핸드폰, ...
                                                     </h3>
-                                                    <ul >
-                                                        <li>36<span>%</span></li>
-                                                        <li>12,900<span>원</span></li>
-                                                        <li>20,000원</li>
+                                                    <h4>50,000원</h4>
+                                                    <ul class="price">
+                                                        <li>42<span>%</span></li>
+                                                        <li>1,329,900<span>원</span></li>                                                        
                                                     </ul>
-                                                </div>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(9,999+)</span>
-                                                        </li>
-                                                        <li>
-                                                            <span>무료배송<i> ·</i></span>
-                                                            <span> K딜추천<i> ·</i></span>
-                                                            <span>단독특가</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec5-box sec5-img1">
-                                        <div class="slide-text">
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec5-img2.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <div class="text2">
-                                                    <h3>
-                                                        [카파] 남성 린넨라이크 데일리 니트 3종 택1
-                                                    </h3>
-                                                    <ul >
-                                                        <li>73<span>%</span></li>
-                                                        <li>73,000<span>원</span></li>
-                                                        <li>100,000원</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(123)</span>
-                                                        </li>
-                                                        <li>
-                                                            <span>무료배송<i> ·</i></span>
-                                                            <span>K딜추천</span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec5-box sec5-img2">
-                                        <div class="slide-text">
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec5-img3.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <div class="text2">
-                                                    <h3>
-                                                        [엑스트라]gni-111 마카롱 휴대용 스피커(색상 택1)
-                                                    </h3>
-                                                    <ul >
-                                                        <li>24<span>%</span></li>
-                                                        <li>19,500<span>원</span></li>
-                                                        <li>34,000원</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(45)</span>
-                                                        </li>
-                                                        <li>
-                                                            <span>무료배송</span>
-                                                           
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec5-box sec5-img3">
-                                        <div class="slide-text">
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec5-img4.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <div class="text2">
-                                                    <h3>
-                                                        [JW중외제약] 퍼스트뮨 포스트바이오틱스 멀티 면역 생유산균
-                                                    </h3>
-                                                    <ul >
-                                                        <li>43<span>%</span></li>
-                                                        <li>19,900<span>원</span></li>
-                                                        <li>35,000원</li>
-                                                    </ul>
-                                                </div>
-                                                <div class="text3">
-                                                    <ul>
+                                                    <ul class="star">
                                                         <li>
                                                             <i class="fa fa-star"></i>
                                                             4.0 <span>(6)</span>
                                                         </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="slide slide1 swipe">
+                                            <div class="slide-text">                                                
+                                                <div class="img-box">
+                                                    <div class="heart">
+                                                        <a href="#">
+                                                            <img src="./img/heart.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <a href="#">
+                                                        <img src="./img/sec5slide2.png" alt="">
+                                                    </a>                                                
+                                                </div>
+                                                <div class="text-box">
+                                                    <h3>
+                                                        제목 한줄 처리
+                                                    </h3>
+                                                    <h4>2,290,000원</h4>
+                                                    <ul class="price">
+                                                        <li>42<span>%</span></li>
+                                                        <li>1,329,900<span>원</span></li>                                                        
+                                                    </ul>
+                                                    <ul class="star">
                                                         <li>
-                                                            <span>무료배송<i> ·</i></span>
-                                                            <span>단독특가</span>
+                                                            <i class="fa fa-star"></i>
+                                                            4.0 <span>(9,999)</span>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                           
+                                        </li>
+                                        <li class="slide slide2 swipe">
+                                            <div class="slide-text">                                                
+                                                <div class="img-box">
+                                                    <div class="heart">
+                                                        <a href="#">
+                                                            <img src="./img/heart.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <a href="#">
+                                                        <img src="./img/sec5slide3.png" alt="">
+                                                    </a>
+                                                </div>
+                                                <div class="text-box">
+                                                    <h3>
+                                                        [브레스마스크] KF-94 <br>마스크 대형 5매입 x 10...
+                                                    </h3>
+                                                    <h4>2,290,000원</h4>
+                                                    <ul class="price">
+                                                        <li>42<span>%</span></li>
+                                                        <li>1,329,900<span>원</span></li>                                                        
+                                                    </ul>
+                                                    <ul class="star">
+                                                        <li>
+                                                            <i class="fa fa-star"></i>
+                                                            4.0 <span>(624)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>                                        
+                                       
+                                        <li class="circle swipe">
+                                            <div class="slide-text">
+                                                <div class="img-box">
+                                                    <a href="#">
+                                                        <img src="./img/sec3arrow.png" alt="">
+                                                    </a>                                               
+                                                </div>
+                                                <div class="text-box">
+                                                    <h5>더보기</h5>                                                
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>                 
+
+
                         </div>
                     </div>
                 </div>
-               
             </div>
         </section>
         <section id="section6">
@@ -657,132 +1088,78 @@
                 <div class="gap">
                     <div class="wrap">
                         <div class="content">
-                            <h2>내가 본 상품의 연관 상품 <span><i class="material-icons">&#xe88f;</i></span></h2>
+                            <ul class="top-textWrap clearfix">
+                                <li class="left">특별 기획전<i></i></li>
+                                <li class="right"><span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span> </li>
+                            </ul>
                            
-                            <div class="slide-wrap">
-                                <ul class="sec6-slide-wrap" >
-    
-                                    <li class="sec6-slide slide0">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img1.png" alt="">
-                                                </a>
+                            <div class="slide-container">
+                                <div class="slide-view">
+                                    <ul class="slide-wrap" >
+        
+                                        <li class="slide slide0 swipe">
+                                            <div class="slide-text-gap">
+                                                <div class="img-box">
+                                                    <a href="#"><img src="./img/sec6-img1.png" alt=""></a>
+                                                </div>
+                                                <div class="text-box">
+                                                    <div class="text-wrap">
+                                                        <h3>
+                                                            집에서 즐기는<br>
+                                                           <strong>아늑한 홈카페!</strong> 
+                                                        </h3>
+                                                        <h4>엔몰에서 원두부터 간편커피까지</h4>
+                                                    </div>                                                    
+                                                </div>
                                             </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [버버리,랑방,다비도<br>프,CK 등] BEST명...
-                                                </h3>
-                                                <h4>2,290,000원</h4>
-                                                <ul>
-                                                    <li>42<span>%</span></li>
-                                                    <li>19,600<span>원</span></li>
-                                                </ul>
+                                        </li>
+                                        <li class="slide slide1 swipe">
+                                            <div class="slide-text-gap">
+                                                <div class="img-box">
+                                                    <a href="#"><img src="./img/sec6-img2.png" alt=""></a>
+                                                </div>
+                                                <div class="text-box">
+                                                    <div class="text-wrap">
+                                                        <h3>
+                                                            집에서 즐기는<br>
+                                                           <strong>아늑한 홈카페!</strong> 
+                                                        </h3>
+                                                        <h4>엔몰에서 원두부터 간편커피까지</h4>
+                                                    </div>                                                    
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec6-slide slide1">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img2.png" alt="">
-                                                </a>                                                
+                                        </li>
+                                        <li class="slide slide2 swipe">
+                                            <div class="slide-text-gap">
+                                                <div class="img-box">
+                                                    <a href="#"><img src="./img/sec6-img3.png" alt=""></a>
+                                                </div>
+                                                <div class="text-box">
+                                                    <div class="text-wrap">
+                                                        <h3>
+                                                            집에서 즐기는<br>
+                                                           <strong>아늑한 홈카페!</strong> 
+                                                        </h3>
+                                                        <h4>엔몰에서 원두부터 간편커피까지</h4>
+                                                    </div>                                                    
+                                                </div>
                                             </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [크리스찬딘] [명품향수st] 여성/남성향수...
-                                                </h3>
-                                                <h4>72,000원</h4>
-                                                <ul>
-                                                    <li>73<span>%</span></li>
-                                                    <li>5,000<span>원</span></li>
-                                                </ul>
+                                        </li>
+                                        
+                                        <li class=" circle swipe">
+                                            <div class="slide-text">
+                                                <div class="img-box">
+                                                    <a href="#">
+                                                        <img src="./img/sec3arrow.png" alt="">
+                                                    </a>                                               
+                                                </div>
+                                                <div class="text-box">
+                                                    <h5>더보기</h5>                                                
+                                                </div>
                                             </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec6-slide slide2">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img3.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [조성아뷰티] 세럼 스<br>틱 허니 프로틴 10g
-                                                </h3>
-                                                <h4>26,000원</h4>
-                                                <ul>
-                                                    <li>81<span>%</span></li>
-                                                    <li>13,400<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec6-slide slide3">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img4.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [마리퍼퓸] 페로몬 카<br>
-                                                    드향수 1개
-                                                </h3>
-                                                <h4>12,900원</h4>
-                                                <ul>
-                                                    <li>47<span>%</span></li>
-                                                    <li>6,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec6-slide slide4">
-                                        <div class="slide-text">
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img5.png" alt="">
-                                                </a>                                                
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [페라리,에르메스,다<br>
-                                                    비도프,몽블랑,버버...
-                                                </h3>
-                                                <h4>72,000원</h4>
-                                                <ul>
-                                                    <li>71<span>%</span></li>
-                                                    <li>21,000<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec6-slide slide5">
-                                        <div class="slide-text">
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img6.png" alt="">
-                                                </a>                                               
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [레노마] 리프레싱 대<br>용량 남성 올인원 화...
-                                                </h3>
-                                                <h4>90,000원</h4>
-                                                <ul>
-                                                    <li>72<span>%</span></li>
-                                                    <li>24,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -794,140 +1171,17 @@
                 <div class="gap">
                     <div class="wrap">
                         <div class="content">
-                            <h2>K-Deal 브랜드 대전  </h2>
-                           
-
-                            <div class="sec7-btn-wrap">
+                            <div class="sec4-slide-wrap">
                                 <ul>
-                                    <li class="addSec7">
-                                        <a href="#">
-                                            <img src="./img/sec7btn1.png" alt="btn1">
-                                            <span>스키니랩</span>                                            
-                                        </a>
-                                    </li>
                                     <li>
-                                        <a href="#">
-                                            <img src="./img/sec7btn2.png" alt="btn1">
-                                            <span>LG</span>
-                                        </a>
+                                        <a href="#"><img src="./img/sec7slide1.png" alt="btn1"></a>
                                     </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec7btn3.png" alt="btn1">
-                                            <span>뉴트리디데이</span>                                            
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec7btn4.png" alt="btn1">
-                                            <span>보만</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec7btn5.png" alt="btn1">
-                                            <span>브람스</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec7btn6.png" alt="btn1">
-                                            <span>삼성</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="slide-wrap">
-                                <ul class="sec7-slide-wrap" >
-    
-                                    <li class="sec7-slide slide0">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec7-img1.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [버버리,랑방,다비도<br>프,CK 등] BEST명...
-                                                </h3>
-                                                <h4>2,290,000원</h4>
-                                                <ul>
-                                                    <li>42<span>%</span></li>
-                                                    <li>19,600<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec6-slide slide1">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec7-img2.png" alt="">
-                                                </a>                                                
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [크리스찬딘] [명품향수st] 여성/남성향수...
-                                                </h3>
-                                                <h4>72,000원</h4>
-                                                <ul>
-                                                    <li>73<span>%</span></li>
-                                                    <li>5,000<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec6-slide slide2">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec7-img3.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [조성아뷰티] 세럼 스<br>틱 허니 프로틴 10g
-                                                </h3>
-                                                <h4>26,000원</h4>
-                                                <ul>
-                                                    <li>81<span>%</span></li>
-                                                    <li>13,400<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec6-slide slide3">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec7-img4.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [마리퍼퓸] 페로몬 카<br>
-                                                    드향수 1개
-                                                </h3>
-                                                <h4>12,900원</h4>
-                                                <ul>
-                                                    <li>47<span>%</span></li>
-                                                    <li>6,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+               
             </div>
         </section>
         <section id="section8">
@@ -935,132 +1189,411 @@
                 <div class="gap">
                     <div class="wrap">
                         <div class="content">
-                            <h2>이런 상품은 어떠세요? <span><i class="material-icons">&#xe88f;</i></span></h2>
-                           
-                            <div class="slide-wrap">
-                                <ul class="sec8-slide-wrap" >
-    
-                                    <li class="sec8-slide slide0">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img1.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [버버리,랑방,다비도프,CK 등] BEST명...
-                                                </h3>
-                                                <h4>2,290,000원</h4>
-                                                <ul>
-                                                    <li>42<span>%</span></li>
-                                                    <li>19,600<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                            <ul class="top-textWrap clearfix">
+                                <li class="left">특별 기획전<i></i></li>
+                                <li class="right"><span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span> </li>
+                            </ul>
+
+                            <div class="btn-wrap">
+                                <ul>
+                                    <li class="addSec+">
+                                        <a href="#">
+                                            <img src="./img/sec8btn1.png" alt="">
+                                            <span>건강/식품</span>                                            
+                                        </a>
                                     </li>
-                                    <li class="sec8-slide slide1">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img2.png" alt="">
-                                                </a>                                                
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [크리스찬딘] [명품향수st] 여성/남성향수...
-                                                </h3>
-                                                <h4>72,000원</h4>
-                                                <ul>
-                                                    <li>73<span>%</span></li>
-                                                    <li>5,000<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/sec8btn2.png" alt="">
+                                            <span>가공/신선</span>
+                                        </a>
                                     </li>
-                                    <li class="sec8-slide slide2">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img3.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [조성아뷰티] 세럼 스틱 허니 프로틴 10g
-                                                </h3>
-                                                <h4>26,000원</h4>
-                                                <ul>
-                                                    <li>81<span>%</span></li>
-                                                    <li>13,400<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/sec8btn3.png" alt="">
+                                            <span>생활/건강</span>                                            
+                                        </a>
                                     </li>
-                                    <li class="sec8-slide slide3">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img4.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [마리퍼퓸] 페로몬 카
-                                                    드향수 1개
-                                                </h3>
-                                                <h4>12,900원</h4>
-                                                <ul>
-                                                    <li>47<span>%</span></li>
-                                                    <li>6,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/sec8btn4.png" alt="">
+                                            <span>디지털/가전</span>
+                                        </a>
                                     </li>
-                                    <li class="sec8-slide slide4">
-                                        <div class="slide-text">
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img5.png" alt="">
-                                                </a>                                                
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [페라리,에르메스,다
-                                                    비도프,몽블랑,버버...
-                                                </h3>
-                                                <h4>72,000원</h4>
-                                                <ul>
-                                                    <li>71<span>%</span></li>
-                                                    <li>21,000<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/sec8btn5.png" alt="">
+                                            <span>스포츠/레저</span>
+                                        </a>
                                     </li>
-                                    <li class="sec8-slide slide5">
-                                        <div class="slide-text">
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec6-img6.png" alt="">
-                                                </a>                                               
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [레노마] 리프레싱 대용량 남성 올인원 화...
-                                                </h3>
-                                                <h4>90,000원</h4>
-                                                <ul>
-                                                    <li>72<span>%</span></li>
-                                                    <li>24,900<span>원</span></li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/sec8btn6.png" alt="">
+                                            <span>패션/뷰티</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./img/sec8btn7.png" alt="">
+                                            <span>출산/육아</span>
+                                        </a>
                                     </li>
                                 </ul>
+                            </div>
+                            <div class="slide-container">
+                                <div class="slide-view">
+                                        <ul class="slide-wrap" >
+                                            <li class="slide slide0">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec8-slide1.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                            i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                        </h3>
+                                                        <ul class="text2">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>
+                                                            <li>2,290,000원</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <ul class="text3">
+                                                            <li>
+                                                                <span>
+                                                                    무료배송<i> ·</i>
+                                                                    K딜추천<i> ·</i>
+                                                                    단독특가
+                                                                </span>
+                                                             </li>                                                     
+                                                             <li>
+                                                                 <i class="fa fa-star"></i>
+                                                                 4.0 <span>(6)</span>
+                                                             </li>
+                                                         </ul>
+                                                    </div>
+                                                
+                                                </div>
+                                            </li>
+                                            <li class="slide slide1">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec8-slide2.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                            i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                        </h3>
+                                                        <ul class="text2">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>
+                                                            <li>2,290,000원</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <ul class="text3">
+                                                            <li>
+                                                                <span>
+                                                                    무료배송<i> ·</i>
+                                                                    K딜추천<i> ·</i>
+                                                                    단독특가
+                                                                </span>
+                                                             </li>                                                     
+                                                             <li>
+                                                                 <i class="fa fa-star"></i>
+                                                                 4.0 <span>(6)</span>
+                                                             </li>
+                                                         </ul>
+                                                    </div>
+                                                
+                                                </div>
+                                            </li>
+                                            <li class="slide slide2">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec8-slide3.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                            i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                        </h3>
+                                                        <ul class="text2">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>
+                                                            <li>2,290,000원</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <ul class="text3">
+                                                            <li>
+                                                                <span>
+                                                                    무료배송<i> ·</i>
+                                                                    K딜추천<i> ·</i>
+                                                                    단독특가
+                                                                </span>
+                                                             </li>                                                     
+                                                             <li>
+                                                                 <i class="fa fa-star"></i>
+                                                                 4.0 <span>(6)</span>
+                                                             </li>
+                                                         </ul>
+                                                    </div>
+                                                
+                                                </div>
+                                            </li>
+                                            <li class="slide slide3">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec8-slide4.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                            i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                        </h3>
+                                                        <ul class="text2">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>
+                                                            <li>2,290,000원</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <ul class="text3">
+                                                            <li>
+                                                                <span>
+                                                                    무료배송<i> ·</i>
+                                                                    K딜추천<i> ·</i>
+                                                                    단독특가
+                                                                </span>
+                                                             </li>                                                     
+                                                             <li>
+                                                                 <i class="fa fa-star"></i>
+                                                                 4.0 <span>(6)</span>
+                                                             </li>
+                                                         </ul>
+                                                    </div>
+                                                
+                                                </div>
+                                            </li>
+                                            <li class="slide slide4">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec8-slide5.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                            i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                        </h3>
+                                                        <ul class="text2">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>
+                                                            <li>2,290,000원</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <ul class="text3">
+                                                            <li>
+                                                                <span>
+                                                                    무료배송<i> ·</i>
+                                                                    K딜추천<i> ·</i>
+                                                                    단독특가
+                                                                </span>
+                                                             </li>                                                     
+                                                             <li>
+                                                                 <i class="fa fa-star"></i>
+                                                                 4.0 <span>(6)</span>
+                                                             </li>
+                                                         </ul>
+                                                    </div>
+                                                
+                                                </div>
+                                            </li>
+                                            <li class="slide slide5">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec8-slide6.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                            i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                        </h3>
+                                                        <ul class="text2">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>
+                                                            <li>2,290,000원</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <ul class="text3">
+                                                            <li>
+                                                                <span>
+                                                                    무료배송<i> ·</i>
+                                                                    K딜추천<i> ·</i>
+                                                                    단독특가
+                                                                </span>
+                                                             </li>                                                     
+                                                             <li>
+                                                                 <i class="fa fa-star"></i>
+                                                                 4.0 <span>(6)</span>
+                                                             </li>
+                                                         </ul>
+                                                    </div>
+                                                
+                                                </div>
+                                            </li>
+                                            <li class="slide slide6">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec8-slide7.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                            i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                        </h3>
+                                                        <ul class="text2">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>
+                                                            <li>2,290,000원</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <ul class="text3">
+                                                            <li>
+                                                                <span>
+                                                                    무료배송<i> ·</i>
+                                                                    K딜추천<i> ·</i>
+                                                                    단독특가
+                                                                </span>
+                                                             </li>                                                     
+                                                             <li>
+                                                                 <i class="fa fa-star"></i>
+                                                                 4.0 <span>(6)</span>
+                                                             </li>
+                                                         </ul>
+                                                    </div>
+                                                
+                                                </div>
+                                            </li>
+                                            <li class="slide slide7">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec8-slide8.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                            i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                        </h3>
+                                                        <ul class="text2">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>
+                                                            <li>2,290,000원</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <ul class="text3">
+                                                            <li>
+                                                                <span>
+                                                                    무료배송<i> ·</i>
+                                                                    K딜추천<i> ·</i>
+                                                                    단독특가
+                                                                </span>
+                                                             </li>                                                     
+                                                             <li>
+                                                                 <i class="fa fa-star"></i>
+                                                                 4.0 <span>(6)</span>
+                                                             </li>
+                                                         </ul>
+                                                    </div>
+                                                
+                                                </div>
+                                            </li>
+                                            <li class="slide slide8">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec8-slide9.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                            i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                        </h3>
+                                                        <ul class="text2">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>
+                                                            <li>2,290,000원</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <ul class="text3">
+                                                            <li>
+                                                                <span>
+                                                                    무료배송<i> ·</i>
+                                                                    K딜추천<i> ·</i>
+                                                                    단독특가
+                                                                </span>
+                                                             </li>                                                     
+                                                             <li>
+                                                                 <i class="fa fa-star"></i>
+                                                                 4.0 <span>(6)</span>
+                                                             </li>
+                                                         </ul>
+                                                    </div>
+                                                
+                                                </div>
+                                            </li>
+                                            <li class="slide slide9">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec8-slide10.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [LG전자] 그램 15인치 노트북 (15Z95N-GRFMK) / <br>
+                                                            i5 / 윈도우 10 홈 / 메모리 8GB / SSD 256GB
+                                                        </h3>
+                                                        <ul class="text2">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>
+                                                            <li>2,290,000원</li>
+                                                        </ul>
+                                                        <hr>
+                                                        <ul class="text3">
+                                                            <li>
+                                                                <span>
+                                                                    무료배송<i> ·</i>
+                                                                    K딜추천<i> ·</i>
+                                                                    단독특가
+                                                                </span>
+                                                             </li>                                                     
+                                                             <li>
+                                                                 <i class="fa fa-star"></i>
+                                                                 4.0 <span>(6)</span>
+                                                             </li>
+                                                         </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -1072,404 +1605,322 @@
                 <div class="gap">
                     <div class="wrap">
                         <div class="content">
-                            <h2>카테고리 별 인기 상품  <span><a href="#">더보기 &nbsp;></a></span></h2>
-                           
-
-                            <div class="sec9-btn-wrap">
-                                <ul>
-                                    <li class="addSec9">
-                                        <a href="#">
-                                            <img src="./img/sec9btn1.png" alt="">
-                                            <span>전체</span>                                            
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec9btn2.png" alt="">
-                                            <span>건강/식품</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec9btn3.png" alt="">
-                                            <span>가공/신선</span>                                            
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec9btn4.png" alt="">
-                                            <span>생활/건강</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec9btn5.png" alt="">
-                                            <span>디지털/가전</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec9btn6.png" alt="">
-                                            <span>스포츠/레저</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec9btn7.png" alt="">
-                                            <span>패션/뷰티</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec9btn8.png" alt="">
-                                            <span>출산/육아</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="slide-wrap">
-                                <ul class="sec9-slide-wrap" >
-    
-                                    <li class="sec9-slide slide0">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec9-img1.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [조여정콜라겐]라이필 더마 콜라겐 1병+1병 총 8...
-                                                </h3>
-                                                <h4>118,000원</h4>
-                                                <ul>
-                                                    <li>53<span>%</span></li>
-                                                    <li>55,000<span>원</span></li>
-                                                </ul>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <span>무료배송<i> ·</i></span>
-                                                            <span>K딜추천<i> ·</i></span>
-                                                            <span>단독특가</span>                                                           
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(45)</span>
-                                                        </li>                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec9-slide slide1">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec9-img2.png" alt="">
-                                                </a>                                                
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [ROYALMINSTER] 2021년 형 로얄민스터 프리 ...
-                                                </h3>
-                                                <h4>598,000</h4>
-                                                <ul>
-                                                    <li>81<span>%</span></li>
-                                                    <li>115,000<span>원</span></li>
-                                                </ul>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <span>무료배송<i> ·</i></span>
-                                                            <span>K딜추천<i> ·</i></span>
-                                                                                                                      
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(45)</span>
-                                                        </li>                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec9-slide slide2">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec9-img3.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [에이징그라운드] 블랙에이징 소고기 5종 택1
-                                                </h3>
-                                                <h4>78,000원</h4>
-                                                <ul>
-                                                    <li>42<span>%</span></li>
-                                                    <li>39,900<span>원</span></li>
-                                                </ul>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <span>무료배송<i> ·</i></span>
-                                                            <span>K딜추천<i> ·</i></span>
-                                                            <span>단독특가</span>                                                           
-                                                        </li>
-                                                                                                              
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec9-slide slide3">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec9-img4.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [브레스마스크] KF-94 마스크 대형 5매입 x 10팩 외 ...
-                                                </h3>
-                                                <h4>34,000원</h4>
-                                                <ul>
-                                                    <li>74<span>%</span></li>
-                                                    <li>8,900<span>원</span></li>
-                                                </ul>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <span>무료배송<i> ·</i></span>
-                                                            <span>K딜추천<i> ·</i></span>
-                                                            <span>단독특가</span>                                                           
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(173)</span>
-                                                        </li>                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec9-slide slide4">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec9-img5.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [에어데이즈] KF94 새부리형 조정석 마스크 50매 ...
-                                                </h3>
-                                                <h4>125,000원</h4>
-                                                <ul>
-                                                    <li>83<span>%</span></li>
-                                                    <li>20,900<span>원</span></li>
-                                                </ul>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <span>무료배송<i> ·</i></span>
-                                                            <span>K딜추천<i> ·</i></span>
-                                                            <span>단독특가</span>                                                           
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(45)</span>
-                                                        </li>                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec9-slide slide5">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec9-img6.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [뉴트리디데이] 멀티비타민
-                                                </h3>
-                                                <h4>119,200원</h4>
-                                                <ul>
-                                                    <li>92<span>%</span></li>
-                                                    <li>9,900<span>원</span></li>
-                                                </ul>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <span>무료배송</span>
-                                                                                                                       
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(6)</span>
-                                                        </li>                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec9-slide slide6">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec9-img7.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [크리넥스] 무형광 순수3겹 천연펄프 두루마리 화장...
-                                                </h3>
-                                                
-                                                <ul>
-                                                    
-                                                    <li>33,900<span>원</span></li>
-                                                </ul>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <span>무료배송<i> ·</i></span>
-                                                            <span>K딜추천<i> ·</i></span>
-                                                            <span>단독특가</span>                                                           
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(45)</span>
-                                                        </li>                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec9-slide slide7">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec9-img8.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [레모나] 비타민 레모나정
-                                                </h3>
-                                                <h4>39,000원</h4>
-                                                <ul>
-                                                    <li>76<span>%</span></li>
-                                                    <li>9,500<span>원</span></li>
-                                                </ul>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <span>무료배송</span>
-                                                                                                                    
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(6)</span>
-                                                        </li>                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec9-slide slide8">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec9-img9.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [바이탈헬스] 면역밸런스
-                                                    프로폴리스/루테인/밀크...
-                                                </h3>
-                                                <h4>135,000원</h4>
-                                                <ul>
-                                                    <li>90<span>%</span></li>
-                                                    <li>13,900<span>원</span></li>
-                                                </ul>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <span>무료배송<i> ·</i></span>
-                                                            
-                                                            <span>단독특가</span>                                                           
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(45)</span>
-                                                        </li>                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="sec9-slide slide9">
-                                        <div class="slide-text">
-                                            
-                                            <div class="img-box">
-                                                <a href="#">
-                                                    <img src="./img/sec9-img10.png" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="text-box">
-                                                <h3>
-                                                    [타월리스트] 호텔수건 모음
-                                                </h3>
-                                                <h4>19,800원</h4>
-                                                <ul>
-                                                    <li>50<span>%</span></li>
-                                                    <li>9,900<span>원</span></li>
-                                                </ul>
-                                                <div class="text3">
-                                                    <ul>
-                                                        <li>
-                                                            <span>무료배송</span>
-                                                                                                                    
-                                                        </li>
-                                                        <li>
-                                                            <i class="fa fa-star"></i>
-                                                            4.0 <span>(6)</span>
-                                                        </li>                                                        
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div class="btn_more-box">
-                                <div class="btn-more">
-                                    <a href="#"> 상품 더보기 &nbsp;></a>
+                            <h2>Best 랭킹<i></i></h2>
+                            <h3>주문이 폭주 하고 있어요!<span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
+                            <div class="content-box">
+                                <div class="rank-container">
+                                    <div class="rank-view">
+                                        <h4>Rank</h4>
+                                        <ul class="rank-wrap">
+                                            <li class="ranking num1 addBtn9"><a href="#">01</a><i></i></li>
+                                            <li class="ranking num2 "><a href="#">02</a><i></i></li>
+                                            <li class="ranking num3"><a href="#">03</a><i></i></li>
+                                            <li class="ranking num4"><a href="#">04</a><i></i></li>
+                                            <li class="ranking num5"><a href="#">05</a><i></i></li>
+                                        </ul>
+                                    </div>
                                 </div>
+
+                                <div class="slide-container">
+                                    <div class="slide-view">
+                                        <ul class="slide-wrap" >
+                                            <li class="slide slide0 swipe addSec9 ">
+                                                <div class="slide-text">                                                
+                                                    <div class="img-box">
+                                                        <div class="num-box">
+                                                            <div class="num">
+                                                                <div>1</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="heart">
+                                                            <a href="#">
+                                                                <img src="./img/heart.png" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <a href="#">
+                                                            <img src="./img/sec9slide1.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [소유] UVC 다용도 살균기
+                                                            MDA-100RG 핸드폰, ...
+                                                        </h3>
+                                                        <h4>50,000원</h4>
+                                                        <ul class="price">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>                                                        
+                                                        </ul>
+                                                        <ul class="star">
+                                                            <li>
+                                                                <i class="fa fa-star"></i>
+                                                                4.0 <span>(6)</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="slide slide1 swipe">
+                                                <div class="slide-text">                                                
+                                                    <div class="img-box">
+                                                        <div class="num-box">
+                                                            <div class="num">
+                                                                <div>2</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="heart">
+                                                            <a href="#">
+                                                                <img src="./img/heart.png" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <a href="#">
+                                                            <img src="./img/sec9slide2.png" alt="">
+                                                        </a>                                                
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            제목 한줄 처리
+                                                        </h3>
+                                                        <h4>2,290,000원</h4>
+                                                        <ul class="price">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>                                                        
+                                                        </ul>
+                                                        <ul class="star">
+                                                            <li>
+                                                                <i class="fa fa-star"></i>
+                                                                4.0 <span>(9,999)</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="slide slide2 swipe">
+                                                <div class="slide-text">                                                
+                                                    <div class="img-box">
+                                                        <div class="num-box">
+                                                            <div class="num">
+                                                                <div>3</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="heart">
+                                                            <a href="#">
+                                                                <img src="./img/heart.png" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <a href="#">
+                                                            <img src="./img/sec9slide3.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [브레스마스크] KF-94 <br>마스크 대형 5매입 x 10...
+                                                        </h3>
+                                                        <h4>2,290,000원</h4>
+                                                        <ul class="price">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>                                                        
+                                                        </ul>
+                                                        <ul class="star">
+                                                            <li>
+                                                                <i class="fa fa-star"></i>
+                                                                4.0 <span>(624)</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="slide slide3 swipe">
+                                                <div class="slide-text">                                                
+                                                    <div class="img-box">
+                                                        <div class="num-box">
+                                                            <div class="num">
+                                                                <div>4</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="heart">
+                                                            <a href="#">
+                                                                <img src="./img/heart.png" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <a href="#">
+                                                            <img src="./img/sec9slide4.png" alt="">
+                                                        </a>
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [에티카] 보건용마스크 K<br>F94 화이트/블랙 - 대...
+                                                        </h3>
+                                                        <h4>2,290,000원</h4>
+                                                        <ul class="price">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>                                                        
+                                                        </ul>
+                                                        <ul class="star">
+                                                            <li>
+                                                                <i class="fa fa-star"></i>
+                                                                4.0 <span>(1,146)</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="slide slide4 swipe">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <div class="num-box">
+                                                            <div class="num">
+                                                                <div>5</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="heart">
+                                                            <a href="#">
+                                                                <img src="./img/heart.png" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <a href="#">
+                                                            <img src="./img/sec9slide5.png" alt="">
+                                                        </a>                                                
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h3>
+                                                            [이롬] 황성주 유기농 AB<br>
+                                                            C주스 110ml x 24팩 외 ...
+                                                        </h3>
+                                                        <h4>2,290,000원</h4>
+                                                        <ul class="price">
+                                                            <li>42<span>%</span></li>
+                                                            <li>1,329,900<span>원</span></li>                                                        
+                                                        </ul>
+                                                        <ul class="star">
+                                                            <li>
+                                                                <i class="fa fa-star"></i>
+                                                                4.0 <span>(26)</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        
+                                            <li class="circle swipe">
+                                                <div class="slide-text">
+                                                    <div class="img-box">
+                                                        <a href="#">
+                                                            <img src="./img/sec3arrow.png" alt="">
+                                                        </a>                                               
+                                                    </div>
+                                                    <div class="text-box">
+                                                        <h5>더보기</h5>                                                
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>                 
+
                             </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section10">
+            <div class="container">
+                <div class="gap">
+                    <div class="wrap">
+                        <div class="content">
+                            <ul class="top-textWrap clearfix">
+                                <li class="left">인기검색 TOP5<i></i></li>
+                                <li class="right"><span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span> </li>
+                            </ul>
+
+                            <div class="slide-container">
+                                <div class="slide-view">
+                                    <ul class="slide-wrap" >
+                                        <li class="slide slide0 swipe addSec10 ">
+                                            <div class="slide-box">
+                                                <div class="text-box">
+                                                    <h3>
+                                                        <strong>01</strong>마스크<span><i class="material-icons">&#xe313;</i></span>
+                                                    </h3>
+                                                </div>
+                                                <div class="img-box">                                                   
+                                                    <a href="#">
+                                                        <img src="./img/sec10_slide1.png" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="slide slide1 swipe ">
+                                            <div class="slide-box">
+                                                <div class="text-box">
+                                                    <h3>
+                                                        <strong>02</strong>비타민<span><i class="material-icons">&#xe313;</i></span>
+                                                    </h3>
+                                                </div>
+                                                <div class="img-box">                                                   
+                                                    <a href="#">
+                                                        <img src="./img/sec10_slide1.png" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="slide slide2 swipe">
+                                            <div class="slide-box">
+                                                <div class="text-box">
+                                                    <h3>
+                                                        <strong>03</strong>물<span><i class="material-icons">&#xe313;</i></span>
+                                                    </h3>
+                                                </div>
+                                                <div class="img-box">                                                   
+                                                    <a href="#">
+                                                        <img src="./img/sec10_slide1.png" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="slide slide3 swipe ">
+                                            <div class="slide-box">
+                                                <div class="text-box">
+                                                    <h3>
+                                                        <strong>04</strong>아웃도어<span><i class="material-icons">&#xe313;</i></span>
+                                                    </h3>
+                                                </div>
+                                                <div class="img-box">                                                   
+                                                    <a href="#">
+                                                        <img src="./img/sec10_slide1.png" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="slide slide4 swipe">
+                                            <div class="slide-box">
+                                                <div class="text-box">
+                                                    <h3>
+                                                        <strong>05</strong>샴푸<span><i class="material-icons">&#xe313;</i></span>
+                                                    </h3>
+                                                </div>
+                                                <div class="img-box">                                                   
+                                                    <a href="#">
+                                                        <img src="./img/sec10_slide1.png" alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div> 
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+
+
     <footer id="footer">
         <div class="container">
             <div class="gap">
@@ -1478,28 +1929,46 @@
                         <ul class="foot-content">
                             <li class="foot1">
                                 <ul class="list">                                    
-                                    <li><a href="#">이용약관 </a><i></i></li>                                    
-                                    <li><a href="#">개인정보처리방침 </a><i></i></li>                                    
-                                    <li><a href="#">고객센터 </a><i></i></li>                                    
-                                    <li><a href="#">입점문의 </a></li>
+                                    <li><a href="#">휴대폰 인증</a></li>                                    
+                                    <li><a href="#">즐겨찾기 추가</a></li>                                    
+                                    <li><a href="#">고객센터</a><i></i></li>                                    
+                                  
                                 </ul>
                             </li>
                             <li class="foot2">
-                                <h3>(주) 케이티</h3><br>
-                                
-                                경기도 성남시 분당구 불정로 90(정자동)<br>
-                                사업자등록번호 : 102-81-42945 &nbsp;<a href="#">사업자정보확인</a><br>
-                                통신판매업신고 : 2002-경기성남-0048<br>
-                                고객센터 : 1522-2856 (평일 09:30~18:30, 유료)<br>
-                                이메일 문의 : cs@kdeal.co.kr<br>
-                                호스팅 제공자 : 주식회사 케이티<br>
-                                Copyright ⓒkt corp. All Rights Reserved.
+
+                               <h3>고객센터</h3>
+                               <div class="tel">
+                                   <img src="./img/ico_footer_call.png" alt=""><p>1234-5678</p>
+                                </div>
+                               <div>평일 10시 ~ 18시 30분</div>
+
+
+                               <ul class="email">
+                                    <li>이메일 문의</li> 
+                                    <li>n-mall@nasmedia.co.kr <a href="#">주소복사</a></li>
+                               </ul>
+                               
+                               
+                               <div class="Registration">
+                                   <ul class="hide">
+                                       <li>서울특별시 강남구 도곡로1길 14 삼일프라자 3, 4, 5층<br>
+                                        사업자 등록번호 102-81-42945</li>
+                                    </ul>
+                                    <a href="#">나스미디어 사업자정보</a>
+                               </div>
+
                             </li>
                             
                             <li class="foot3">
-                                ㈜케이티는 통신판매 중개자이며 통신판매 당사자가 아닙니다. <br>
-                                본 K-Deal사이트에서 제3자가 판매하는 상품 및 거래에 관한 의무와 책임은 판매자 에게 있습니다. <br>
-                                ㈜나스미디어가 K-Deal 사이트 운영을 대행하고 있습니다.
+                                <ul class="list">                                    
+                                    <li><a href="#">이용약관 </a><i></i></li>                                    
+                                    <li><a href="#">개인정보처리방침 </a><i></i></li>                              
+                                    <li><a href="#">입점문의 </a></li>
+                                </ul>
+                            </li>
+                            <li class="foot4">
+                                Copyright ⓒ NASMEDIA Co., LTD. All Rights Reserved.
                             </li>
                         </ul>
 
@@ -1510,7 +1979,6 @@
         </div>
     </footer>
 </div>
-    
-<script src="./js/starBucks.js"></script>
+<script src="./js/mall.js"></script>
 </body>
 </html>
