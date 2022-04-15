@@ -13,6 +13,7 @@
             this.section5Fn();
             this.section6Fn();
             this.section8BtnFn();
+            this.section9Fn();
             this.footerFn();
           
     
@@ -65,15 +66,15 @@
                
 
                   $smoothBtn.on({
-                     click:  function(event){
-                           event.preventDefault();
-                           $this = $(this); //현재 클릭한 이(this) 버튼
+                        click:  function(event){
+                              event.preventDefault();
+                              $this = $(this); //현재 클릭한 이(this) 버튼
 
-                           var url = $this.attr('href'); 
-                     if(url !== undefined && url != ''){
-                              $htmlBody.stop().animate({scrollTop:$( url ).offset().top-60},800,'easeInOutCirc');
-                           
-                     }
+                              var url = $this.attr('href'); 
+                        if(url !== undefined && url != ''){
+                                 $htmlBody.stop().animate({scrollTop:$( url ).offset().top-60},800,'easeInOutCirc');
+                              
+                        }
                      }
                   });
 
@@ -721,181 +722,193 @@
          });
 
         },
-        section9BtnFn: function(){
+        section9Fn: function(){
 
-         (function($, window, document, undefined){  //다른 플로그인과 $ (제이쿼리) 충돌 막기 위해 즉시실행함수 사용함.
-		
-            var setId = 0;
-            var t = 0;
-            var t2 = 0;
-            var ratio = $('.item').eq(0).innerWidth();
-            var slideW = $(window).innerWidth()*( ratio / $(window).innerWidth() ); //슬라이드너비 = 창너비*(슬라이드너비/창너비); //0.435627956 슬라이드 1개의 창너비의 대한 너비 비율
-            var m = $('.screensWrap>li').length; //총 슬라이드 갯수 좌측슬라이드+중앙슬라이드+우측슬라이드
-            var n = m-2-1; //가운데 중앙슬라이드 갯수 4 = 7-2-1 (슬라이드는 5개 인덱스번호는 0 ~ 4)
-            //var slideW = $(window).innerWidth()*ratio; //슬라이드너비 = 창너비*슬라이드1개의비율값
-            var cnt = 0;
+         const slideWrap      = $('#section9 .slide-wrap');
+         const slideContainer = $('#section9 .slide-view');
+         var setId = 0;
+         var t = 0;
+         var t2 = 0;
+         var ratio = $('.item').eq(0).innerWidth();
+         var slideW = $(window).innerWidth()*( ratio / $(window).innerWidth() ); //슬라이드너비 = 창너비*(슬라이드너비/창너비); //0.435627956 슬라이드 1개의 창너비의 대한 너비 비율
+         var m = $('.screensWrap>li').length+1; //총 슬라이드 갯수 좌측슬라이드+중앙슬라이드+우측슬라이드
+         var n = m-2-1; //가운데 중앙슬라이드 갯수 4 = 7-2-1 (슬라이드는 5개 인덱스번호는 0 ~ 4)
+         //var slideW = $(window).innerWidth()*ratio; //슬라이드너비 = 창너비*슬라이드1개의비율값
+         var cnt = 0;
+         var heart = $('.heart');
+        
+         //let   cnt            = 0;
+         let   swipeStart     = null;
+         let   swipeEnd       = null;
+
+            
+            autoPlay('_play');  //자동실행 4초 후에 실행
          
-               
-               autoPlay('_play');  //자동실행 4초 후에 실행
-            
-            
-            
-               
-               //////////////////////////////////////////////////////////////////////////////		
-               //////////////////////////////////////////////////////////////////////	
          
-               function autoPlay(z){
-                  if( z=='_play' || z=='_mouseleave' || z=='_play_auto'){
-                     if(t2==0){ //플레이버튼 클릭과 마우스떠났을때
-                              //두번 자동실행을 막기 위해 t2변수 사용 버블링 디버깅.
-                              
-                        setId = setInterval(nextSlide,3000);
-                        t2=1;
-                     }
-                  }			
-               }	
+            function autoPlay(z){
+               if( z=='_play' || z=='_mouseleave' || z=='_play_auto'){
+                  if(t2==0){ //플레이버튼 클릭과 마우스떠났을때
+                           //두번 자동실행을 막기 위해 t2변수 사용 버블링 디버깅.
+                           
+                     setId = setInterval(nextSlide,3000);
+                     t2=1;
+                  }
+               }			
+            }	
+            
+            
+            //슬라이드의 모든 버튼위에 마우스 올리면 타이머 일시정지
+            
+            $('.slideControl').on({
                
-               
-               //슬라이드의 모든 버튼위에 마우스 올리면 타이머 일시정지
-               
-               $('.slideControl').on({
-                  
-                  mouseover:	function(e){
+               mouseover:	function(e){
+                  clearInterval(setId);  	//일시정지
+                  $(e.target).addClass('addBtn9');
+                  t=0;
+               },
+               mouseout:	function(e){				
+                  if(t==0){  	//플레이버튼 스톱(▶) 상태이라면 플레이 불가능
+                     t2=0;	//자동실행함수를 호출시 변수 초기화
                      clearInterval(setId);  	//일시정지
-                     $(e.target).addClass('sec2_1active');
-                     t=0;
-                  },
-                  mouseout:	function(e){				
-                     if(t==0){  	//플레이버튼 스톱(▶) 상태이라면 플레이 불가능
-                        t2=0;	//자동실행함수를 호출시 변수 초기화
-                        clearInterval(setId);  	//일시정지
-                        autoPlay('_mouseleave'); //플레이(||)	상태에서 자동 실행 가능	
-                        $(e.target).removeClass('sec2_1active');
-                     }
+                     autoPlay('_mouseleave'); //플레이(||)	상태에서 자동 실행 가능	
+                     $(e.target).removeClass('addBtn9');
                   }
-                  
-               });
-         
-            
-            
-               
-               //////////////////////////////////////////////////////////////////////////////	
-               // 반응형 슬라이드 
-               // 1024 초과이면 슬라이드 이미지 비율 계산 3개씩 보이기
-               // 1024 이하이면 슬라이드 이미지 창 너비로 1개씩 보이기
-               //////////////////////////////////////////////////////////////////////////////	
-               function resizeFn(){
-                  if( $(window).innerWidth() > 1024 ){
-                     slideW = $(window).innerWidth()*ratio;  // 1024 초과이면 슬라이드 이미지 비율 계산 3개씩 보이기
-                  }
-                  else{
-                     slideW = $(window).innerWidth();  // 1024 이하이면 슬라이드 이미지 창 너비로 1개씩 보이기
-                  }
-                  
-                  $('.sec2_1screens').css({ width: slideW });
-                  $('.screensWrap').css({ width: slideW*m });
-                  $('.screensWrap>li').css({ width: slideW });
-                  // 메인슬라이드 반응형 적용			
-                  mainSlide();
-               }	
-         
-               resizeFn();
-               setTimeout(resizeFn,100);
-         
-               $(window).resize(function(){
-                  resizeFn();
-               });
-         
-         
-               //메인 슬라이드 함수
-               function mainSlide(){
-               
-                  $('.screensWrap').stop().animate({ left: -slideW*cnt}, 600, function(){
-                     cnt>n?cnt=0:cnt;
-                     cnt<0?cnt=n:cnt;
-                     $('.screensWrap').stop().animate({ left: -slideW*cnt}, 0);
-                     // $('.screensWrap>li').removeClass('active');
-                     // for(i=0; i<m; i+=m/3){
-                     // 	$('.screensWrap>li').eq(cnt+i).addClass('active');
-                     // }
-                  });
-               
-                  navFn();
-                  
                }
                
+            });
+      
          
-               //네비게이션 버튼(페이지 버튼==인디게이터 버튼) 마킹(Marking) 이벤트 
-               function navFn(){
+         
+          
+      
+            //메인 슬라이드 함수
+            function mainSlide(){
+            
+               $('.screensWrap').stop().animate({ left: -slideW*cnt}, 600, function(){
+                  cnt>n?cnt=0:cnt;
+                  cnt<0?cnt=n:cnt;
+                  $('.screensWrap').stop().animate({ left: -slideW*cnt}, 0);
+                  cnt>5?cnt=0:cnt;
+               });
+            
+               navFn();
+               
+            }
+            
+      
+            //네비게이션 버튼(페이지 버튼==인디게이터 버튼) 마킹(Marking) 이벤트 
+            function navFn(){
+               
+               $('.navItems').removeClass('addBtn9');	    //초기화
+               $('.item').removeClass('addBtn9');	    //초기화
+               $('.navItems').eq(cnt>n?0:cnt).addClass('addBtn9');	//해당 슬라이드 버튼만 표시 
+               $('.item').eq(cnt>n?0:cnt).addClass('addBtn9');	//해당 슬라이드 버튼만 표시 
+      
                   
-                  $('.navitems').removeClass('sec2_1active');	    //초기화
-                  $('.navitems').eq(cnt>n?0:cnt).addClass('sec2_1active');	//해당 슬라이드 버튼만 표시 
-         
                      
-                        
-               }		
+            }		
+      
          
-            
-         
-               ////////////////////////////////////////////////////////////////////////
-               //네비게이션 버튼 클릭이벤트
-               //네비게이션 버튼을 배열처리(each()메소드)하여 인덱스값 이용
-               $('.navitems').each(function(index){
-                  $(this).on({
-                     click:	function(){
-                        cnt = index;
-                        mainSlide();
-                     }
-                  });
-               });
-         
-         
-               //다음 슬라이드 카운트 함수
-               function nextSlide(){
-                  cnt++;
-                  mainSlide();
-               }
-         
-         
-               //이전 슬라이드 카운트 함수
-               function prevSlide(){
-                  cnt--;
-                  mainSlide();
-               }
-         
-         
-               //다음화살버튼 클릭이벤트
-               $('.sec2_1nextBtn').on({
+      
+            ////////////////////////////////////////////////////////////////////////
+            //네비게이션 버튼 클릭이벤트
+            //네비게이션 버튼을 배열처리(each()메소드)하여 인덱스값 이용
+            $('.navItems').each(function(index){
+               $(this).on({
                   click:	function(){
-                     
-                     if( !$('.screensWrap').is(':animated') ){
-                        nextSlide();
-                        
-                     }				
+                     cnt = index;
+                     mainSlide();
                   }
                });
+            });
+      
+      
+            //다음 슬라이드 카운트 함수
+            function nextSlide(){
+               cnt++;
+               mainSlide();
+            }
+      
+      
+            //이전 슬라이드 카운트 함수
+            function prevSlide(){
+               cnt--;
+               mainSlide();
+            }
+      
+      
+         
+
+         //4. 마우스 터치 스와이프
+         slideContainer.on({
+            mousedown: function(event){
+               //터치스와이프 시작 포지션
+               swipeStart = event.clientX;
+               dragStart  = event.clientX - slideWrap.offset().left -slideW*cnt;
+               mouseDown  = true;//드래그 시작임을 표시
                
-               //이전화살버튼 클릭이벤트
-               $('.sec2_1prevBtn').on({
-                  click:	function(){
+
+            },//mousedown 끝
+            mouseup: function(event){
+               swipeEnd = event.clientX;
+               mouseDown  = false; //드래그 끝
+               
+               if( swipeStart-swipeEnd > 0 ){//다음슬라이드                     
+                  nextSlide();
+               }
+               if( swipeStart-swipeEnd < 0 ){   // 이전슬라이드                    
+                  prevSlide();
+            }
+         
+         }
+      });
+
+
+    
+      //5. 마우스 드레그 앤 드롭
+      // mousemove
+
+      //6. 반응형 모바일 손가락 핑거 드래드 앤 드롭(반응형)
+      // 마우스 인식못함 동작안함
+      // 반응형 진행하고 폴리필 touchEvent 추가
+      // touchstart(mousedown) / touchend(mouseup) / touchmove(mousemove)
+      slideContainer.on({
+         touchstart: function(event){
+           
+            swipeStart = event.originalEvent.touches[0].clientX;
+            dragStart  = event.originalEvent.touches[0].clientX - slideWrap.offset().left -slideW*cnt;
+            mouseDown  = true;//드래그 시작임을 표시 
+                               
+         },
+         touchend: function(event){                  
+               swipeEnd   = event.originalEvent.changedTouches[0].clientX;   
+               mouseDown  = false; //드래그 끝
+                 
+                
+               if( swipeStart-swipeEnd > 0 ){//다음슬라이드                     
+                  nextSlide();
+               }
+               if( swipeStart-swipeEnd < 0 ){   // 이전슬라이드                    
+                  prevSlide();
+                  
+               }   
+         }
+      });
+
+
+
+
+         // heart 클릭 이벤트
+            heart.on({
+               click:  function(event){
+                     event.preventDefault();
+                     $this = $(this); //현재 클릭한 이(this) 버튼
+                     heart.toggleClass('addHeart');
                      
-                     if( !$('.screensWrap').is(':animated') ){
-                        prevSlide();
-                     
-                     }
-                  }
-               });
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         })(jQuery, window, document);
+              
+            }
+         });
+
         },
         footerFn:  function(){
          var copyBtn =  document.getElementById('copy');
