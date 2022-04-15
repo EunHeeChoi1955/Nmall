@@ -21,8 +21,9 @@
     <!-- jQuery 오픈소스 -->
     <script src="./js/lib/jquery.min.js"></script> 
 	<script src='./js/lib/jquery-1.12.4.min.js'></script>
-	<script src='./js/lib/jquery.mobile-1.4.5.min.js'></script><!-- 터치이벤트 웹앱 -->
+	<!-- <script src='./js/lib/jquery.mobile-1.4.5.min.js'></script>터치이벤트 웹앱 -->
 	<script src='./js/lib/jquery.easing.1.3.js'></script>
+	<script src='./js/lib/jquery.touchSwipe.min.js'></script>
 
     <!-- 리액트 웹개발 오픈소스 -->    
     <script src="./js/lib/react.development.js"></script>
@@ -40,7 +41,7 @@
         <li><a href="#main" class="smoothBtn ">메인바로가기</a></li>
         <li><a href="#footer" class="smoothBtn ">하단바로가기</a></li>
     </ul>
-    <header id="header" >
+    <header id="header"  class="header">
         <div class="container ">
 
             <div class="top clearfix">
@@ -61,14 +62,14 @@
                             <div class="icon-box">
                                 <ul class="clearfix ">
                                     <li >
-                                       <!-- <a href="#"><span class="glyphicon">&#xe003;</span></a>  -->
-                                       <a href="#"><img src="./img/magni.svg" alt=""></a> 
+                                       <!-- <a href='javascript:void(0);'><span class="glyphicon">&#xe003;</span></a>  -->
+                                       <a href='javascript:void(0);'><img src="./img/magni.svg" alt=""></a> 
                                         
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href='javascript:void(0);'>
                                             <em class="badge">5</em>
-                                            <a href="#"><img src="./img/cart.svg" alt=""></a> 
+                                            <a href='javascript:void(0);'><img src="./img/cart.svg" alt=""></a> 
                                             <!-- <span class="glyphicon">&#xe116;</span> -->
                                         </a>
                                     </li>
@@ -86,25 +87,25 @@
                 
                 <div class="bottom-wrap">
                     <nav id="nav" class="clearfix">
-                        <ul class="clearfix">
-                            <li class="mainbtn addClass ">
-                                <a href="#" class="main-btn addClass">홈</a>
+                        <ul class="clearfix nav-warp ">
+                            <li class="mainbtn addClass">
+                                <a href='javascript:void(0);' class="main-btn addClass">홈</a>
                                 
                             </li>
                             <li class="mainbtn">
-                                <a href="#" class="main-btn">베스트</a>
+                                <a href='javascript:void(0);' class="main-btn">베스트</a>
                                                                                           
                             </li>
                             <li class="mainbtn">
-                                <a href="#" class="main-btn">신상품</a>
+                                <a href='javascript:void(0);' class="main-btn">신상품</a>
                                                                                                                        
                             </li>
                             <li class="mainbtn">
-                                <a href="#" class="main-btn">기획전</a>
+                                <a href='javascript:void(0);' class="main-btn">기획전</a>
                                                            
                             </li>
                             <li class="mainbtn">
-                                <a href="#" class="main-btn">이벤트</a>
+                                <a href='javascript:void(0);' class="main-btn">이벤트</a>
                                                            
                             </li>
                             
@@ -140,7 +141,7 @@
                                         <div class="cnt">
                                             <h5><strong>4&nbsp;</strong>/&nbsp;4</h5>
                                         </div>
-                                        <a href="#">
+                                        <a href='javascript:void(0);'>
                                             <img src="./img/slide4.png" alt="">
                                         </a>                                        
                                     </li>
@@ -163,7 +164,7 @@
                                             <h5><strong>1&nbsp;</strong>/&nbsp;4</h5>
                                         </div>
 
-                                        <a href="#">
+                                        <a href='javascript:void(0);'>
                                             <img src="./img/slide1.png" alt="">
                                         </a>                                        
                                     </li>
@@ -183,7 +184,7 @@
                                             <h5><strong>2&nbsp;</strong>/&nbsp;3</h5>
                                         </div>
 
-                                        <a href="#">
+                                        <a href='javascript:void(0);'>
                                             <img src="./img/slide2.png" alt="">
                                         </a>
                                     </li>
@@ -203,7 +204,7 @@
                                             <h5><strong>3&nbsp;</strong>/&nbsp;4</h5>
                                         </div>
 
-                                        <a href="#">
+                                        <a href='javascript:void(0);'>
                                             <img src="./img/slide3.png" alt="">
                                         </a>
                                     </li >
@@ -224,7 +225,7 @@
                                             <h5><strong>4&nbsp;</strong>/&nbsp;4</h5>
                                         </div>
 
-                                        <a href="#">
+                                        <a href='javascript:void(0);'>
                                             <img src="./img/slide4.png" alt="">
                                         </a>                                        
                                     </li>
@@ -246,7 +247,7 @@
                                         <div class="cnt">
                                             <h5><strong>1&nbsp;</strong>/&nbsp;4</h5>
                                         </div>
-                                        <a href="#">
+                                        <a href='javascript:void(0);'>
                                             <img src="./img/slide1.png" alt="">
                                         </a>                                        
                                     </li>
@@ -259,46 +260,53 @@
 
                                     <ul class="btn-wrap swiper-wrapper menu_list">
                                         <li class="swiper-slide btn0">
-                                            <a href="#">
-                                                <img src="./img/btn1.png" alt="">
-                                                <span>프리미엄관</span>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/btn1.svg" alt=""> 
                                             </a>
+                                                <span>프리미엄관</span>
+                                           
                                         </li>
                                         <li  class="swiper-slide ">
-                                            <a href="#">
-                                                <img src="./img/btn2.png" alt="">
-                                                <span>MD추천</span>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/btn2.svg" alt="">
                                             </a>
+                                                <span>MD추천</span>
+                                            
                                         </li>
                                         <li  class="swiper-slide btn2">
-                                            <a href="#">
-                                                <img src="./img/btn3.png" alt="">
-                                                <span>N마트</span>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/btn3.svg" alt=""> 
                                             </a>
+                                                <span>N마트</span>
+                                           
                                         </li>
                                         <li class="swiper-slide btn3">
-                                            <a href="#">
-                                                <img src="./img/btn4.png" alt="">
-                                                <span>쿠폰</span>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/btn4.svg" alt="">
                                             </a>
+                                                <span>쿠폰</span>
+                                            
                                         </li>
                                         <li class="swiper-slide btn4">
-                                            <a href="#">
-                                                <img src="./img/btn5.png" alt="">
-                                                <span>한정특가</span>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/btn5.svg" alt="">
                                             </a>
+                                                <span>한정특가</span>
+                                            
                                         </li>
                                         <li class="swiper-slide btn5">
-                                            <a href="#">
-                                                <img src="./img/btn6.png" alt="">
-                                            <span>카테고리</span>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/btn6.svg" alt="">
                                             </a>
+                                            <span>카테고리</span>
+                                            
                                         </li>
                                         <li class="swiper-slide btn6">
-                                            <a href="#">
-                                                <img src="./img/btn7.png" alt="">
-                                                <span>선물하기</span>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/btn7.svg" alt="">
                                             </a>
+                                                <span>선물하기</span>
+                                            
                                         </li>
                                     </ul>
                                 
@@ -326,7 +334,7 @@
                     <div class="sec2-slide-container">
                         <div class="slide-view">
                             <h2>지금 이시간! 타임딜 <i></i></h2>
-                            <h3>지금 고민하는 순간 끝! 기회를 잡으세요<span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
+                            <h3>지금 고민하는 순간 끝! 기회를 잡으세요<span><a href='javascript:void(0);'>전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
                            
                                 <ul class="sec2-slide-wrap" >
 
@@ -338,7 +346,7 @@
                                                     <div class="left" >남은시간</div>
                                                     <div class="right">05:02:49</div>
                                                 </div>
-                                                <a href="#">
+                                                <a href='javascript:void(0);'>
                                                     <img src="./img/sec2-slide1.png" alt="sec2-slide1">
                                                 </a>
                                             </div>
@@ -378,7 +386,7 @@
                                                     <div class="left">남은시간</div>
                                                     <div class="right">05:02:49</div>
                                                 </div>
-                                                <a href="#">
+                                                <a href='javascript:void(0);'>
                                                     <img src="./img/sec2-slide2.png" alt="sec2-slide1">
                                                 </a>
                                             </div>
@@ -418,7 +426,7 @@
                                                     <div class="left">남은시간</div>
                                                     <div class="right">05:02:49</div> 
                                                 </div>
-                                                <a href="#">
+                                                <a href='javascript:void(0);'>
                                                     <img src="./img/sec2-slide3.png" alt="sec2-slide1">
                                                 </a>
                                             </div>
@@ -458,7 +466,7 @@
                                                     <div class="left">남은시간</div>
                                                     <div class="right">05:02:49</div> 
                                                 </div>
-                                                <a href="#">
+                                                <a href='javascript:void(0);'>
                                                     <img src="./img/sec2-slide4.png" alt="sec2-slide1">
                                                 </a>
                                             </div>
@@ -499,7 +507,7 @@
                                                     <div class="right">05:02:49</div>
                                                     
                                                 </div>
-                                                <a href="#">
+                                                <a href='javascript:void(0);'>
                                                     <img src="./img/sec2-slide5.png" alt="sec2-slide1">
                                                 </a>
                                             </div>
@@ -540,7 +548,7 @@
                                                     <div class="right">05:02:49</div>
                                                     
                                                 </div>
-                                                <a href="#">
+                                                <a href='javascript:void(0);'>
                                                     <img src="./img/sec2-slide6.png" alt="sec2-slide1">
                                                 </a>
                                             </div>
@@ -581,7 +589,7 @@
                                                     <div class="right">05:02:49</div>
                                                     
                                                 </div>
-                                                <a href="#">
+                                                <a href='javascript:void(0);'>
                                                     <img src="./img/sec2-slide7.png" alt="sec2-slide1">
                                                 </a>
                                             </div>
@@ -622,7 +630,7 @@
                                                     <div class="right">05:02:49</div>
                                                     
                                                 </div>
-                                                <a href="#">
+                                                <a href='javascript:void(0);'>
                                                     <img src="./img/sec2-slide8.png" alt="sec2-slide1">
                                                 </a>
                                             </div>
@@ -663,7 +671,7 @@
                                                     <div class="right">05:02:49</div>
                                                     
                                                 </div>
-                                                <a href="#">
+                                                <a href='javascript:void(0);'>
                                                     <img src="./img/sec2-slide9.png" alt="sec2-slide1">
                                                 </a>
                                             </div>
@@ -704,7 +712,7 @@
                                                     <div class="right">05:02:49</div>
                                                     
                                                 </div>
-                                                <a href="#">
+                                                <a href='javascript:void(0);'>
                                                     <img src="./img/sec2-slide10.png" alt="sec2-slide1">
                                                 </a>
                                             </div>
@@ -752,7 +760,7 @@
                     <div class="wrap">
                         <div class="content">
                             <h2>MD’s Pick<i></i></h2>
-                            <h3>놓쳐서는 안될 상품을 모아봤어요<span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
+                            <h3>놓쳐서는 안될 상품을 모아봤어요<span><a href='javascript:void(0);'>전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
                          
                             <div class="slide-container">
                                 <div class="slide-view">
@@ -762,11 +770,11 @@
                                             <div class="slide-text">                                                
                                                 <div class="img-box">
                                                     <div class="heart">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/heart.png" alt="">
                                                         </a>
                                                     </div>
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec3slide1.png" alt="">
                                                     </a>
                                                 </div>
@@ -793,11 +801,11 @@
                                             <div class="slide-text">                                                
                                                 <div class="img-box">
                                                     <div class="heart">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/heart.png" alt="">
                                                         </a>
                                                     </div>
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec3slide2.png" alt="">
                                                     </a>                                                
                                                 </div>
@@ -823,11 +831,11 @@
                                             <div class="slide-text">                                                
                                                 <div class="img-box">
                                                     <div class="heart">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/heart.png" alt="">
                                                         </a>
                                                     </div>
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec3slide3.png" alt="">
                                                     </a>
                                                 </div>
@@ -853,11 +861,11 @@
                                             <div class="slide-text">                                                
                                                 <div class="img-box">
                                                     <div class="heart">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/heart.png" alt="">
                                                         </a>
                                                     </div>
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec3slide4.png" alt="">
                                                     </a>
                                                 </div>
@@ -883,11 +891,11 @@
                                             <div class="slide-text">
                                                 <div class="img-box">
                                                     <div class="heart">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/heart.png" alt="">
                                                         </a>
                                                     </div>
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec3slide5.png" alt="">
                                                     </a>                                                
                                                 </div>
@@ -914,7 +922,7 @@
                                         <li class="circle swipe">
                                             <div class="slide-text">
                                                 <div class="img-box">
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec3arrow.png" alt="">
                                                     </a>                                               
                                                 </div>
@@ -941,7 +949,7 @@
                             <div class="sec4-slide-wrap">
                                 <ul>
                                     <li>
-                                        <a href="#"><img src="./img/sec4slide1.png" alt="btn1"></a>
+                                        <a href='javascript:void(0);'><img src="./img/sec4slide1.png" alt="btn1"></a>
                                     </li>
                                 </ul>
                             </div>
@@ -957,27 +965,27 @@
                     <div class="wrap">
                         <div class="content">
                             <h2>지금 고객님께 딱!<i></i></h2>
-                            <h3>이 순간에만 만나 볼 수 있는 특별한 기획 <span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
+                            <h3>이 순간에만 만나 볼 수 있는 특별한 기획 <span><a href='javascript:void(0);'>전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
                          
                             <div class="text-box">
                                 <h4>비 올때<br>
                                     필요한 필수템</h4>
                                 <h5>15%쿠폰 + 첫 적립 이벤트</h5>
-                                <div><a href="#">상품 더보기 ></a></div>
+                                <div><a href='javascript:void(0);'>상품 더보기 ></a></div>
                             </div>
 
-                            <div class="slide-container">                                
+                            <div class="slide-container ">                                
                                 <div class="slide-view">
                                     <ul class="slide-wrap" >        
                                         <li class="slide slide0 swipe">
                                             <div class="slide-text">                                                
                                                 <div class="img-box">
                                                     <div class="heart">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/heart.png" alt="">
                                                         </a>
                                                     </div>
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec5slide1.png" alt="">
                                                     </a>
                                                 </div>
@@ -1004,11 +1012,11 @@
                                             <div class="slide-text">                                                
                                                 <div class="img-box">
                                                     <div class="heart">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/heart.png" alt="">
                                                         </a>
                                                     </div>
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec5slide2.png" alt="">
                                                     </a>                                                
                                                 </div>
@@ -1034,11 +1042,11 @@
                                             <div class="slide-text">                                                
                                                 <div class="img-box">
                                                     <div class="heart">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/heart.png" alt="">
                                                         </a>
                                                     </div>
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec5slide3.png" alt="">
                                                     </a>
                                                 </div>
@@ -1064,7 +1072,7 @@
                                         <li class="circle swipe">
                                             <div class="slide-text">
                                                 <div class="img-box">
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec3arrow.png" alt="">
                                                     </a>                                               
                                                 </div>
@@ -1090,7 +1098,7 @@
                         <div class="content">
                             <ul class="top-textWrap clearfix">
                                 <li class="left">특별 기획전<i></i></li>
-                                <li class="right"><span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span> </li>
+                                <li class="right"><span><a href='javascript:void(0);'>전체보기<i class="material-icons">&#xe315;</i></a></span> </li>
                             </ul>
                            
                             <div class="slide-container">
@@ -1100,7 +1108,7 @@
                                         <li class="slide slide0 swipe">
                                             <div class="slide-text-gap">
                                                 <div class="img-box">
-                                                    <a href="#"><img src="./img/sec6-img1.png" alt=""></a>
+                                                    <a href='javascript:void(0);'><img src="./img/sec6-img1.png" alt=""></a>
                                                 </div>
                                                 <div class="text-box">
                                                     <div class="text-wrap">
@@ -1116,7 +1124,7 @@
                                         <li class="slide slide1 swipe">
                                             <div class="slide-text-gap">
                                                 <div class="img-box">
-                                                    <a href="#"><img src="./img/sec6-img2.png" alt=""></a>
+                                                    <a href='javascript:void(0);'><img src="./img/sec6-img2.png" alt=""></a>
                                                 </div>
                                                 <div class="text-box">
                                                     <div class="text-wrap">
@@ -1132,7 +1140,7 @@
                                         <li class="slide slide2 swipe">
                                             <div class="slide-text-gap">
                                                 <div class="img-box">
-                                                    <a href="#"><img src="./img/sec6-img3.png" alt=""></a>
+                                                    <a href='javascript:void(0);'><img src="./img/sec6-img3.png" alt=""></a>
                                                 </div>
                                                 <div class="text-box">
                                                     <div class="text-wrap">
@@ -1149,7 +1157,7 @@
                                         <li class=" circle swipe">
                                             <div class="slide-text">
                                                 <div class="img-box">
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec3arrow.png" alt="">
                                                     </a>                                               
                                                 </div>
@@ -1174,7 +1182,7 @@
                             <div class="sec4-slide-wrap">
                                 <ul>
                                     <li>
-                                        <a href="#"><img src="./img/sec7slide1.png" alt="btn1"></a>
+                                        <a href='javascript:void(0);'><img src="./img/sec7slide1.png" alt="btn1"></a>
                                     </li>
                                 </ul>
                             </div>
@@ -1191,54 +1199,56 @@
                         <div class="content">
                             <ul class="top-textWrap clearfix">
                                 <li class="left">특별 기획전<i></i></li>
-                                <li class="right"><span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span> </li>
+                                <li class="right"><span><a href='javascript:void(0);'>전체보기<i class="material-icons">&#xe315;</i></a></span> </li>
                             </ul>
 
-                            <div class="btn-wrap">
-                                <ul>
-                                    <li class="addSec+">
-                                        <a href="#">
-                                            <img src="./img/sec8btn1.png" alt="">
-                                            <span>건강/식품</span>                                            
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec8btn2.png" alt="">
-                                            <span>가공/신선</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec8btn3.png" alt="">
-                                            <span>생활/건강</span>                                            
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec8btn4.png" alt="">
-                                            <span>디지털/가전</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec8btn5.png" alt="">
-                                            <span>스포츠/레저</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec8btn6.png" alt="">
-                                            <span>패션/뷰티</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="./img/sec8btn7.png" alt="">
-                                            <span>출산/육아</span>
-                                        </a>
-                                    </li>
-                                </ul>
+                            <div class="btn-view">
+                                <div class="btn-wrap">
+                                    <ul>
+                                        <li class="addSec+">
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/sec8btn1.png" alt="">
+                                                <span>건강/식품</span>                                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/sec8btn2.png" alt="">
+                                                <span>가공/신선</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/sec8btn3.png" alt="">
+                                                <span>생활/건강</span>                                            
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/sec8btn4.png" alt="">
+                                                <span>디지털/가전</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/sec8btn5.png" alt="">
+                                                <span>스포츠/레저</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/sec8btn6.png" alt="">
+                                                <span>패션/뷰티</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href='javascript:void(0);'>
+                                                <img src="./img/sec8btn7.png" alt="">
+                                                <span>출산/육아</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="slide-container">
                                 <div class="slide-view">
@@ -1246,7 +1256,7 @@
                                             <li class="slide slide0">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec8-slide1.png" alt="">
                                                         </a>
                                                     </div>
@@ -1281,7 +1291,7 @@
                                             <li class="slide slide1">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec8-slide2.png" alt="">
                                                         </a>
                                                     </div>
@@ -1316,7 +1326,7 @@
                                             <li class="slide slide2">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec8-slide3.png" alt="">
                                                         </a>
                                                     </div>
@@ -1351,7 +1361,7 @@
                                             <li class="slide slide3">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec8-slide4.png" alt="">
                                                         </a>
                                                     </div>
@@ -1386,7 +1396,7 @@
                                             <li class="slide slide4">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec8-slide5.png" alt="">
                                                         </a>
                                                     </div>
@@ -1421,7 +1431,7 @@
                                             <li class="slide slide5">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec8-slide6.png" alt="">
                                                         </a>
                                                     </div>
@@ -1456,7 +1466,7 @@
                                             <li class="slide slide6">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec8-slide7.png" alt="">
                                                         </a>
                                                     </div>
@@ -1491,7 +1501,7 @@
                                             <li class="slide slide7">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec8-slide8.png" alt="">
                                                         </a>
                                                     </div>
@@ -1526,7 +1536,7 @@
                                             <li class="slide slide8">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec8-slide9.png" alt="">
                                                         </a>
                                                     </div>
@@ -1561,7 +1571,7 @@
                                             <li class="slide slide9">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec8-slide10.png" alt="">
                                                         </a>
                                                     </div>
@@ -1606,17 +1616,17 @@
                     <div class="wrap">
                         <div class="content">
                             <h2>Best 랭킹<i></i></h2>
-                            <h3>주문이 폭주 하고 있어요!<span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
+                            <h3>주문이 폭주 하고 있어요!<span><a href='javascript:void(0);'>전체보기<i class="material-icons">&#xe315;</i></a></span></h3>
                             <div class="content-box">
                                 <div class="rank-container">
                                     <div class="rank-view">
                                         <h4>Rank</h4>
                                         <ul class="rank-wrap">
-                                            <li class="ranking num1 addBtn9"><a href="#">01</a><i></i></li>
-                                            <li class="ranking num2 "><a href="#">02</a><i></i></li>
-                                            <li class="ranking num3"><a href="#">03</a><i></i></li>
-                                            <li class="ranking num4"><a href="#">04</a><i></i></li>
-                                            <li class="ranking num5"><a href="#">05</a><i></i></li>
+                                            <li class="ranking num1 addBtn9"><a href='javascript:void(0);'>01</a><i></i></li>
+                                            <li class="ranking num2 "><a href='javascript:void(0);'>02</a><i></i></li>
+                                            <li class="ranking num3"><a href='javascript:void(0);'>03</a><i></i></li>
+                                            <li class="ranking num4"><a href='javascript:void(0);'>04</a><i></i></li>
+                                            <li class="ranking num5"><a href='javascript:void(0);'>05</a><i></i></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1633,11 +1643,11 @@
                                                             </div>
                                                         </div>
                                                         <div class="heart">
-                                                            <a href="#">
+                                                            <a href='javascript:void(0);'>
                                                                 <img src="./img/heart.png" alt="">
                                                             </a>
                                                         </div>
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec9slide1.png" alt="">
                                                         </a>
                                                     </div>
@@ -1669,11 +1679,11 @@
                                                             </div>
                                                         </div>
                                                         <div class="heart">
-                                                            <a href="#">
+                                                            <a href='javascript:void(0);'>
                                                                 <img src="./img/heart.png" alt="">
                                                             </a>
                                                         </div>
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec9slide2.png" alt="">
                                                         </a>                                                
                                                     </div>
@@ -1704,11 +1714,11 @@
                                                             </div>
                                                         </div>
                                                         <div class="heart">
-                                                            <a href="#">
+                                                            <a href='javascript:void(0);'>
                                                                 <img src="./img/heart.png" alt="">
                                                             </a>
                                                         </div>
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec9slide3.png" alt="">
                                                         </a>
                                                     </div>
@@ -1739,11 +1749,11 @@
                                                             </div>
                                                         </div>
                                                         <div class="heart">
-                                                            <a href="#">
+                                                            <a href='javascript:void(0);'>
                                                                 <img src="./img/heart.png" alt="">
                                                             </a>
                                                         </div>
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec9slide4.png" alt="">
                                                         </a>
                                                     </div>
@@ -1774,11 +1784,11 @@
                                                             </div>
                                                         </div>
                                                         <div class="heart">
-                                                            <a href="#">
+                                                            <a href='javascript:void(0);'>
                                                                 <img src="./img/heart.png" alt="">
                                                             </a>
                                                         </div>
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec9slide5.png" alt="">
                                                         </a>                                                
                                                     </div>
@@ -1805,7 +1815,7 @@
                                             <li class="circle swipe">
                                                 <div class="slide-text">
                                                     <div class="img-box">
-                                                        <a href="#">
+                                                        <a href='javascript:void(0);'>
                                                             <img src="./img/sec3arrow.png" alt="">
                                                         </a>                                               
                                                     </div>
@@ -1833,7 +1843,7 @@
                         <div class="content">
                             <ul class="top-textWrap clearfix">
                                 <li class="left">인기검색 TOP5<i></i></li>
-                                <li class="right"><span><a href="#">전체보기<i class="material-icons">&#xe315;</i></a></span> </li>
+                                <li class="right"><span><a href='javascript:void(0);'>전체보기<i class="material-icons">&#xe315;</i></a></span> </li>
                             </ul>
 
                             <div class="slide-container">
@@ -1842,12 +1852,12 @@
                                         <li class="slide slide0 swipe addSec10 ">
                                             <div class="slide-box">
                                                 <div class="text-box">
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <h3><strong>01</strong>마스크<span><i class="material-icons">&#xe313;</i></span></h3>
                                                     </a>
                                                 </div>
                                                 <div class="img-box">                                                   
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec10_slide1.png" alt="">
                                                     </a>
                                                 </div>
@@ -1856,12 +1866,12 @@
                                         <li class="slide slide1 swipe ">
                                             <div class="slide-box">
                                                 <div class="text-box">
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                      <h3><strong>02</strong>비타민<span><i class="material-icons">&#xe313;</i></span></h3>
                                                     </a>
                                                 </div>
                                                 <div class="img-box">                                                   
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec10_slide1.png" alt="">
                                                     </a>
                                                 </div>
@@ -1870,12 +1880,12 @@
                                         <li class="slide slide2 swipe">
                                             <div class="slide-box">
                                                 <div class="text-box">
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                          <h3><strong>03</strong>물<span><i class="material-icons">&#xe313;</i></span></h3>
                                                     </a>     
                                                 </div>
                                                 <div class="img-box">                                                   
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec10_slide1.png" alt="">
                                                     </a>
                                                 </div>
@@ -1884,12 +1894,12 @@
                                         <li class="slide slide3 swipe ">
                                             <div class="slide-box">
                                                 <div class="text-box">
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                       <h3><strong>04</strong>아웃도어<span><i class="material-icons">&#xe313;</i></span></h3>
                                                     </a>
                                                 </div>
                                                 <div class="img-box">                                                   
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec10_slide1.png" alt="">
                                                     </a>
                                                 </div>
@@ -1898,12 +1908,12 @@
                                         <li class="slide slide4 swipe">
                                             <div class="slide-box">
                                                 <div class="text-box">
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <h3><strong>05</strong>샴푸<span><i class="material-icons">&#xe313;</i></span></h3>
                                                     </a>
                                                 </div>
                                                 <div class="img-box">                                                   
-                                                    <a href="#">
+                                                    <a href='javascript:void(0);'>
                                                         <img src="./img/sec10_slide1.png" alt="">
                                                     </a>
                                                 </div>
@@ -1929,9 +1939,9 @@
                         <ul class="foot-content">
                             <li class="foot1">
                                 <ul class="list">                                    
-                                    <li><a href="#">휴대폰 인증</a></li>                                    
-                                    <li><a href="#">즐겨찾기 추가</a></li>                                    
-                                    <li><a href="#">고객센터</a><i></i></li>                                    
+                                    <li><a href='javascript:void(0);'>휴대폰 인증</a></li>                                    
+                                    <li><a href='javascript:void(0);'>즐겨찾기 추가</a></li>                                    
+                                    <li><a href='javascript:void(0);'>고객센터</a><i></i></li>                                    
                                   
                                 </ul>
                             </li>
@@ -1946,7 +1956,10 @@
 
                                <ul class="email">
                                     <li>이메일 문의</li> 
-                                    <li>n-mall@nasmedia.co.kr <a href="#">주소복사</a></li>
+                                    <li >
+                                        <span id="textDiv">n-mall@nasmedia.co.kr </span>                                       
+                                        <a id="copy">주소복사</a>
+                                    </li>
                                </ul>
                                
                                
@@ -1955,16 +1968,16 @@
                                        <li>서울특별시 강남구 도곡로1길 14 삼일프라자 3, 4, 5층<br>
                                         사업자 등록번호 102-81-42945</li>
                                     </ul>
-                                    <a href="#">나스미디어 사업자정보</a>
+                                    <a href='javascript:void(0);'>나스미디어 사업자정보</a>
                                </div>
 
                             </li>
                             
                             <li class="foot3">
                                 <ul class="list">                                    
-                                    <li><a href="#">이용약관 </a><i></i></li>                                    
-                                    <li><a href="#">개인정보처리방침 </a><i></i></li>                              
-                                    <li><a href="#">입점문의 </a></li>
+                                    <li><a href='javascript:void(0);'>이용약관 </a><i></i></li>                                    
+                                    <li><a href='javascript:void(0);'>개인정보처리방침 </a><i></i></li>                              
+                                    <li><a href='javascript:void(0);'>입점문의 </a></li>
                                 </ul>
                             </li>
                             <li class="foot4">
@@ -1980,5 +1993,22 @@
     </footer>
 </div>
 <script src="./js/mall.js"></script>
+ <script>
+    // function copyToClipboard(val) {
+    // var t = document.createElement("textarea");
+    // document.body.appendChild(t);
+    // t.value = val;
+    // t.select();
+    // document.execCommand('copy');
+    // document.body.removeChild(t);
+    // }
+
+    // $('#copy').click(function() {
+    //   copyToClipboard('https://n-mall@nasmedia.co.kr/');
+    //   alert('주소를 복사하였습니다');
+    // });
+
+
+  </script> 
 </body>
 </html>
